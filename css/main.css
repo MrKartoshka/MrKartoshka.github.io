@@ -136,11 +136,11 @@ input[type="checkbox"]{
 	visibility: hidden;
 }
 
-.checkbox-field{
+[for="rememberme"]{
 	position: relative;
 }
 
-.checkbox-field:before{
+[for="rememberme"]:before{
 	content: "";
 	position: absolute;
 	width: 12px;
@@ -148,15 +148,19 @@ input[type="checkbox"]{
 	background-color: #3b99fc;
 	border-radius: 2px;
 	top: 3px;
-	left: -15px;
+	left: -20px;
 }
 
-.checkbox-field:after{
+[for="rememberme"]:after{
+	content: '';
+}
+
+[type="checkbox"]:checked ~ [for="rememberme"]:after {
 	content: "✓";
 	position: absolute;
 	font-size: 9px;
-	top: 2px;
-	left: -13px;
+	top: 3px;
+	left: -18px;
 	color: #fff;
 }
 
