@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+	margin: 0;
+	background-color: #e8e8e8;
+}
+
+.main-window{
+	position: relative;
+	width: 840px;
+	border-top: solid 2px #e62b1e;
+	margin: 0 auto;
+	font-family: Arial, Sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+	background-color: #fff;
+}
+
+.cross-exit:after{
+	position: absolute;
+	content: "✕";
+	color: #cacaca;
+	font-size: 20px;
+	right: 15px;
+	top: 10px;
+
+
+}
+
+.main-window{
+
+}
+
+.welcome-text{
+	text-align: center;
+	font-size: 31px;
+	margin: 30px 0;
+
+}
+
+.center-block{
+	background-color: #f3f3f3;
+	display: flex;
+	justify-content: center;
+}
+
+.left-box, .right-box {
+	width: 50%;
+}
+
+button{
+	border: none;
+	border-radius: 4px;
+	font-family: Arial, Sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+button:active{
+	box-shadow: 2px 5px 2px rgba(0, 0, 0, .3) inset; 
+}
+
+button:focus{
+	outline: none;
+}
+
+.login-socials{
+	width: 300px;
+	height: 40px;
+	border: none;
+	border-radius: 4px;
+	font-family: Arial, Sans-serif;
+	padding-right: 60px;
+	text-align: right;
+	margin-left: 14%;
+}
+
+.fb-button{
+	background-color: #3e5b96;
+	margin-top: 45px;
+}
+
+.fb-button:hover{
+	background-color: #385388;
+}
+
+
+.google-button{
+	background-color: #dd5342;
+	margin-top: 20px;
+}
+
+.google-button:hover{
+	background-color: #cd4c3c;
+}
+
+.fb-button:before, .google-button:before {
+	display: inline;
+ 	font: 14px/1 FontAwesome;
+ 	font-size: 22px;
+ 	position: relative;
+ 	left: -50px;
+
+}
+
+.fb-button:before{
+	content: "\f09a";
+}
+
+.google-button:before{
+	content: "\f0d5";
+}
+
+input[type="text"], input[type="password"] {
+	width: 300px;
+	height: 40px;
+	border: 1px solid #dddddd;
+	box-sizing: border-box; 
+	margin: 5px 0;
+	font-size: 22px;
+}
+
+input[type="checkbox"]{
+	visibility: hidden;
+}
+
+.checkbox-field{
+	position: relative;
+}
+
+.checkbox-field:before{
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: #3b99fc;
+	border-radius: 2px;
+	top: 3px;
+	left: -15px;
+}
+
+.checkbox-field:after{
+	content: "✓";
+	position: absolute;
+	font-size: 9px;
+	top: 2px;
+	left: -13px;
+	color: #fff;
+}
+
+
+
+.right-box div {
+	margin-bottom: 20px;
+	margin-right: 90px;
+}
+
+.login-field{
+	margin-top: 40px;
+}
+
+.login-button{
+	width: 100px;
+	height: 40px;
+	background-color: #252525;
+}
+
+.login-button:hover{
+	background-color: #666666;
+}
+
+.anchor-help{
+margin-left: 50px;
+color: #252525;
+}
+
+.anchor-help:hover{
+	color: #666666;
+}
+
+.right-box{
+	margin: 0 auto;
+	margin-bottom: 40px;
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 60px;
+}
+
+.right-box:before{
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 250px;
+	background: #cfcfcf;
+	left: 0px;
+	top: 40px;
+}
+
+.signup-text{
+	font-size: 18px;
+	margin-top: 35px;
+	padding-bottom: 40px;
+	text-align: center;
+	color: #666666;
+}
+.anchor-signup{
+	color: #000;
+}
+
+.anchor-signup:hover{
+	color: #666;
+}
+
