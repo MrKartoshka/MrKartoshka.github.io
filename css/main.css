@@ -140,7 +140,7 @@ input[type="checkbox"]{
 	position: relative;
 }
 
-.checkbox-field:after{
+.checkbox-field:before{
 	content: "";
 	position: absolute;
 	width: 12px;
@@ -151,7 +151,7 @@ input[type="checkbox"]{
 	left: -15px;
 }
 
-.checkbox-field:before:action{
+.checkbox-field:after{
 	content: "✓";
 	position: absolute;
 	font-size: 9px;
