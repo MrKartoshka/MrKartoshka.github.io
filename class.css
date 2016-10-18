@@ -1,0 +1,82 @@
+body{
+	background: #fff;
+	 font-family: sans-serif;
+	font-weight: bold;
+}
+
+h1, p{
+	text-align: center;
+}
+
+.centerBlock {
+	display: flex;
+	justify-content: center;
+}
+
+.leftBox{
+	border-right: solid 2px #cfcfcf;
+}
+
+.leftBox div{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.leftBox button{
+	width: 100%;
+}
+
+
+.rightBox div{
+	margin-top: 10px;
+	margin-left: 15%; 
+}
+
+button{
+	font-weight: bold;
+	border: none;
+	border-radius: 2px;
+	padding: 12px 30px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	margin: 10px;
+	color: #FFF;
+
+}
+
+div a{
+	color: black;
+}
+
+p{
+	color: #4f689e;
+}
+
+p a{
+	color: #4f689e; 
+}
+
+.fbButton{
+	background-color: #3e5b96;
+}
+
+.gButton{
+	background-color: #dd5342;
+}
+
+.logButton{
+	background-color: #000;
+
+}
+
+.leftBox, .rightBox {
+	padding: 10px;
+	width: 30%;
+}
+
+hr{
+	border: none;
+	background-color: #e62b1e;
+	height: 2px;
+}
