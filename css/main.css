@@ -34,10 +34,6 @@ body{
 
 }
 
-.main-window{
-
-}
-
 .welcome-text{
 	text-align: center;
 	font-size: 31px;
@@ -73,7 +69,7 @@ button:active{
 }
 
 button:focus{
-	outline: none;
+	outline: hidden;
 }
 
 .login-socials{
@@ -208,7 +204,7 @@ color: #252525;
 	width: 1px;
 	height: 250px;
 	background: #cfcfcf;
-	left: 0px;
+	left: 0;
 	top: 40px;
 }
 
