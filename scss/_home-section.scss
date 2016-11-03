@@ -1,0 +1,28 @@
+[id="home"] {
+@include background-img($home-bg);
+}
+
+.content--home {
+	text-align: center;
+
+	h1{
+	font-size: 2.5em;
+	font-family: $font-nexa-l;
+	font-weight: 100;
+	color: $main-font-color; 
+	margin: 55px;
+	} 
+
+}  
+
+.home-logo {
+	padding-top: 14vh;
+	margin-bottom: 0;
+	height: 54vh;
+	width: auto;
+
+	img{
+	max-height: 100%;
+	max-width: 100%;
+	}
+}

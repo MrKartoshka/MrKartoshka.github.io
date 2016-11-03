@@ -1,0 +1,25 @@
+[id='portfolio'] {
+	@include background-img($portfolio-bg);
+}
+
+.portfolio-conten__text {
+	font-size: 3em;
+	font-family: $font-nexa-l;
+	font-weight: lighter;
+	color: $main-font-color;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}
+
+.portfolio-content__photo {
+	display: flex;
+	margin: 0 100px; 
+}
+
+.photos {
+	max-height: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 25px;
+}

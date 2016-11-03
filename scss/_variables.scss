@@ -1,0 +1,15 @@
+$main-font-color: #f1f1f1;
+$second-font-color: #bebebe;
+$third-font-color: #202020;
+$font-felt: 'Felt Tip Woman';
+$font-nexa-l: 'Nexa Light';
+$font-nexa-b: 'Nexa Bold';
+$font-open-sans: 'Open Sans', sans-serif;
+$home-bg: '../img/home-background.jpg';
+$portfolio-bg: '../img/portfolio-background.jpg';
+
+@mixin background-img($img-url) {
+	background-image: url($img-url);
+	background-size: cover;
+	background-position: center center;
+}

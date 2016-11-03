@@ -1,0 +1,53 @@
+.content-contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: $third-font-color;
+
+	p {
+		font-family: $font-nexa-b;
+		font-size: 2em;
+		text-transform: uppercase;
+	}
+
+	a {
+		font-family: $font-nexa-l;
+		font-size: 4em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: inherit;
+	}
+} 
+
+
+.contact--social {
+	display: flex;
+	justify-content: center;
+}
+
+.social-media-icon {
+	fill: $third-font-color;
+	padding: 5px;
+	width: 50px;
+	height: 50px;
+	margin: 0 20px;
+	border: 2px solid $third-font-color;
+	border-radius: 25px;
+
+}
+
+
+.footer {
+	color: $second-font-color;
+	font-size: 16px;
+	font-family: $font-nexa-l;
+	text-transform: uppercase;
+	text-align: center;
+	border-top: 1px solid $second-font-color;
+	margin: 0 70px;
+	p {
+		vertical-align: bottom;
+		margin: 40px auto;
+	}
+}
