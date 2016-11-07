@@ -1,0 +1,5 @@
+	$tri-size: 20px,
+  $tri-color: #333,
+  $tri-direction: down;
+  $browser-context: 16px;
+  $grid-name: col;
