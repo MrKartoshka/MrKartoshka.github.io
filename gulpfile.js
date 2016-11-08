@@ -10,10 +10,10 @@ var gulp         = require('gulp'),
 gulp.task('sass', function () {
      return gulp.src('scss/**/*.scss')
        .pipe(sourcemaps.init())
-       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+       .pipe(sass().on('error', sass.logError))
        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
        .pipe(sourcemaps.write('.'))
-       .pipe(gulp.dest('css'))
+       .pipe(gulp.dest('_build/assets/css'))
        .pipe(browser.stream({match: '**/*.css'}));
 
 });
