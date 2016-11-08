@@ -1,5 +1,5 @@
-@for $i form 1 through 12 {
+@for $i form 1 through 10 {
 	.#{$grid-name}-#{$i} {
-		width: calc($i * 100% / 12 );
+		width: calc($i * 100% / 10 );
 	}
 }
