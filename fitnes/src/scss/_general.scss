@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
+body, header, footer ,section {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: $fitness-red-color;
+}
+

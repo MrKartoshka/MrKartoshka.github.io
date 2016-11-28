@@ -1,0 +1,69 @@
+header {
+	@include clearfix;
+}
+
+@keyframes menu-btn {
+	from  { background-color: rgba(0,0,0,0);
+		border-radius: 30%;
+		font-size: 13px;
+	 }
+	 to {background-color: rgba(253,99,78,0.3);
+	 	border-radius: 50%;
+	 	font-size: 14px;
+	 }
+}
+
+.header--logo {
+	float: left;
+	margin-top: 50px;
+	margin-left: 90px;
+	font-size: 24px;
+	font-weight: 600;
+	position: relative;
+
+	&:before {
+		content: $icon-drop;
+		font-family: $global-font-icon;
+		line-height: 1;
+		color: $fitness-red-color;
+		font-size: 40px;
+		position: absolute;
+		left: -40px;
+	}
+}
+
+.header--nav {
+	margin-top: 50px;
+	margin-right: 40px;
+	float: right;
+
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header--nav__item {
+	display: inline; 
+
+	a{
+		padding: 10px;
+		margin: 20px;
+		color: inherit;
+		font-size: 13px;
+		font-weight: 600;
+		text-decoration: none;
+
+		&:hover, &:active {
+			background-color: rgba(253,99,78,0.3);
+			font-size: 14px;
+			animation-name: menu-btn;
+			animation-duration: 0.2s;
+			border-radius: 50%;
+
+
+		}
+	}
+}

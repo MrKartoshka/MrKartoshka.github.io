@@ -1,0 +1,13 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin background-img($img-url) {
+	background-image: url($img-url);
+	background-size: cover;
+	background-position: center top;
+} 

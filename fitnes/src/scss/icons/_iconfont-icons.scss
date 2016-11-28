@@ -1,0 +1,99 @@
+$global-font-icon: 'fitnes-icon-font';
+
+@font-face {
+	 font-family: $global-font-icon;
+	 src:url("../fonts/fitnes-icons.eot");
+	 src:url("../fonts/fitnes-icons.?#iefix") format("embedded-opentype"),
+	   url("../fonts/fitnes-icons.woff") format("woff"),
+	   url("../fonts/fitnes-icons.ttf") format("truetype"),
+	   url("../fonts/fitnes-icons.#fitnes-icons") format("svg");
+	 font-weight: normal;
+	 font-style: normal;
+}
+
+.icon {
+ 	font-family: $global-font-icon;
+
+ &:before {
+	 font-style: normal !important;
+	 font-weight: normal !important;
+	 font-variant: normal !important;
+	 text-transform: none !important;
+	 speak: none;
+	 line-height: 1;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+ }
+
+ &.icon-arrow-right {
+   &:before {
+     content: $icon-arrow-right;
+   }
+ }
+ &.icon-avocado {
+   &:before {
+     content: $icon-avocado;
+   }
+ }
+ &.icon-chat {
+   &:before {
+     content: $icon-chat;
+   }
+ }
+ &.icon-cloud {
+   &:before {
+     content: $icon-cloud;
+   }
+ }
+ &.icon-dashboard {
+   &:before {
+     content: $icon-dashboard;
+   }
+ }
+ &.icon-drop {
+   &:before {
+     content: $icon-drop;
+   }
+ }
+ &.icon-facebook {
+   &:before {
+     content: $icon-facebook;
+   }
+ }
+ &.icon-linkedin {
+   &:before {
+     content: $icon-linkedin;
+   }
+ }
+ &.icon-man {
+   &:before {
+     content: $icon-man;
+   }
+ }
+ &.icon-price-tag {
+   &:before {
+     content: $icon-price-tag;
+   }
+ }
+ &.icon-strawbeary {
+   &:before {
+     content: $icon-strawbeary;
+   }
+ }
+ &.icon-suitcase {
+   &:before {
+     content: $icon-suitcase;
+   }
+ }
+ &.icon-twitter {
+   &:before {
+     content: $icon-twitter;
+   }
+ }
+ &.icon-youtube {
+   &:before {
+     content: $icon-youtube;
+   }
+ }
+
+}

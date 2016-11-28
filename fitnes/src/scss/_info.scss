@@ -1,0 +1,42 @@
+.s-info {
+	background-color: $fitness-green-color;
+}
+
+.info--container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0; 
+}
+
+.col-4 {
+	vertical-align: top; 
+	width: 25%;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin-right: -4px;
+	color: #fff;
+	font-size: 14px;
+
+	h3 {
+		font-size: 24px;
+	}
+
+	i {
+		font-size: 50px;
+		line-height: 1;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&:first-child {
+		padding-left: 0 !important;
+	}
+
+	&:last-child {
+		padding-right: 0 !important;
+	}
+}

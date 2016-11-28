@@ -1,0 +1,52 @@
+.s-jumbotron-bottom {
+	@include background-img($jumbotron-bottom--bg); 
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden; 
+	color: $fitness-white-color;
+}
+
+.s-jumbotron-bottom:before {
+  content: '';
+  position: absolute;
+  bottom:-10%;
+  left: 0;
+  height: 25%;
+  width: 71%;
+  background: $fitness-black-color;
+  -webkit-transform: skew(0deg, 5deg);
+  -moz-transform: skew(0deg, 5deg);
+  -ms-transform: skew(0deg, 5deg);
+  -o-transform: skew(0deg, 5deg);
+  transform: skew(0deg, 5deg);
+} 
+.s-jumbotron-bottom:after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  height: 26%;
+  width: 70%;
+  background: $fitness-black-color;
+  -webkit-transform: skew(0deg, -6deg);
+  -moz-transform: skew(0deg, -6deg);
+  -ms-transform: skew(0deg, -6deg);
+  -o-transform: skew(0deg, -6deg);
+  transform: skew(0deg, -6deg);
+}
+
+
+.triangle-bottomleft {
+	width: 0; 
+	height: 0;
+	border-bottom: 30px solid $fitness-red-color;;
+	border-right: 66vw solid transparent;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+}

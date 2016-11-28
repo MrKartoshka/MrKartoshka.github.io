@@ -1,0 +1,51 @@
+.s-jumbotron-top {
+	@include background-img($jumbotron-top--bg);
+	text-transform: uppercase;
+	height: 100vh;
+	position: relative;
+	color: #fff;
+	overflow: hidden;
+}
+
+.s-jumbotron-top:after {
+	content: '';
+	border-bottom: 100px solid rgba(253,99,78,0.3);
+	border-left: 125vw solid transparent;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+.jumbotron-top__quote {
+	position: absolute;
+	left: 7.5%;
+	bottom: 16.666%;
+
+	p {
+		position: absolute;
+		left: 190px;
+		bottom: -1em;
+		font-size: 15px;
+
+		&:after {
+			content: '/';
+			color: $fitness-green-color;
+			font-weight: 600;
+		}
+	}
+
+
+
+	h1 {
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 40px;
+
+		&:after {
+			content: '/';
+			color: $fitness-red-color;
+			font-weight: 600; 
+		}
+	} 
+}

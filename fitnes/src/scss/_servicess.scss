@@ -1,0 +1,170 @@
+.article {
+	display: flex;
+	align-items: stretch;
+	align-content: center;
+	height: 100%;
+
+}
+
+.article-txt {
+	background-color: $fitness-white-color;
+	height: 40%;
+	padding: 50px;
+
+	&,.article-w-33{
+		height: 100%;
+	}
+
+	p {
+		font-size: 14px;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+
+	h3 {
+		font-size: 35px;
+		margin-top: 0;
+		margin-bottom: 20px;
+		font-weight: 400; 
+	}
+	a {
+		color: $fitness-green-color;
+	}
+	p, h3 {
+		text-transform: uppercase;
+		padding: 3px 0;
+	}
+}
+
+.article .colored-bg {
+	color: $fitness-white-color;
+}
+
+.article-colored {
+		h3 {
+		color: $fitness-green-color;
+	}
+
+	p:first-child {
+		color: $fitness-red-color;
+		font-family: montserrat, sans-serif;
+
+	}
+}
+
+@for $i from 1 through 2 {
+	.article-#{$i}{
+text-align: center;
+}
+	i {
+		font-size: 24px;
+		color: $fitness-grey-color;
+		margin: 20px 0;
+	}
+}
+
+
+.article-img{
+	height: 60%;
+	position: relative;
+
+	&,.article-w-66{
+		height: 100%;
+	}
+}
+
+.colored-bg {
+	background-color: $fitness-green-color;
+}
+
+.services {
+	width: 100%;
+
+	.row {
+		height: 400px;
+	}
+}
+
+@for $i from 1 through 6 {
+	.article-#{$i}>.article-img{
+@include background-img("../img/s-#{$i}.jpg"); 
+}
+}
+
+.article-w-33 {
+	width: 33.3333%;
+	flex-direction: column;
+}
+
+.article-w-66 {
+	width: 66.6666%;
+	flex-direction: column;
+} 
+
+.row {
+	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	height: 650px;
+	margin: 0 auto;
+}
+
+.article-stat{
+	position: absolute;
+
+	&.stat--t-l {
+		left: 55px;
+		top: 60px;
+	}
+
+	&.stat--t-r {
+		right: 55px;
+		top: 60px;
+	}
+	&.stat--b-l {
+		left: 40px;
+		bottom: 40px;
+	}
+	&.stat--b-r {
+		right: 40px;
+		bottom: 40px;
+	}
+}
+
+.article-1 .article-img .article-stat {
+		font-size: 12px;
+		color: $fitness-red-color;
+	span {
+		color: $fitness-white-color;
+	}
+	
+	i {
+		color: $fitness-red-color;
+		font-size: 1em;
+	}
+
+}
+
+.article-2 .article-img .article-stat {
+		font-size: 12px;
+		color: $fitness-white-color;
+	
+	i {
+		color: $fitness-red-color;
+		font-size: 1em;
+	}
+
+}
+
+
+.article-4 .article-img .article-stat {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $fitness-white-color;
+	
+	i {
+		color: $fitness-white-color;
+		font-size: 1em;
+	}
+
+}
