@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/build/css/main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="card effect__move">
+		  <div class="card__front">
+		    <div class="card__front--content">
+		    <img  src="assets/build/img/logo.png" alt="Hill Side">
+		    <p >клубний будинок</p>
+		    </div>
+		  </div>
+		  <div class="card__aftersend">
+		  	<div class="card__aftersend--content">
+		  		<p>
+		  			Приглашение на презентацию
+						клубного дома Hill Side будет 
+						отправлено на ваш e-mail.
+					</p>
+					<hr>
+					<img src="assets/build/img/ty.png" alt="спасибо">
+		  	</div>
+		  </div>
+		  <div class="card__back">
+		    <div class="card__back--content ">
+		    	<p>Запуск проекта – совсем скоро.
+						Заполните форму ниже, и мы 
+						уведомим вас о старте продаж.
+					</p>
+					<form action="post.php" method="POST" class='contact-us'>
+						<input class='contact-us--name' type="text" name="client-name" placeholder="Имя" >
+						<input class='contact-us--email' type="email" name="clien-email" placeholder="vasya.pupkin@gmail.com">
+						<input class=".contact-us-submit" type="image" src="assets/build/img/send.png" name="submit-client-info" onsubmit="return false">
+					</form>
+		    </div>
+		  </div>
+		</div>
+	</div>
+<script>
+	var card = document.querySelector(".card.effect__move");
+	var cardF = document.querySelector(".card__front");
+	var cardA = document.querySelector(".card__aftersend");
+	var submit = document.querySelector(".contact-us-submit");
+(function clickListener() {
+    cardF.addEventListener( "mouseenter", function() {
+      var c = card.classList;
+      c.add("flipped");
+    });
+    submit.addEventListener( "click", function() {
+     	setTimeout(function() {
+     	var c = card.classList;
+      cardA.style.display = 'block';
+      cardF.style.display = 'none';
+      c.remove("flipped");}, 1000)
+    });
+  }
+)();
+
+</script>
+</body>
+</html>
