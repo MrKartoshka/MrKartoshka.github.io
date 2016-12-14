@@ -47,8 +47,8 @@
 	var submit = document.querySelector(".contact-us-submit");
 (function clickListener() {
     cardF.addEventListener( "mouseenter", function() {
-      var c = card.classList;
-      c.add("flipped");
+     setTimeout(function() { var c = card.classList;
+      c.add("flipped");;}, 200)
     });
     submit.addEventListener( "click", function() {
      	setTimeout(function() {
