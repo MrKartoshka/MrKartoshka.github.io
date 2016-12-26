@@ -1,16 +1,18 @@
-<?
+<?php
 
-$adminemail="**********";  // e-mail админа 
+$EmailTo = "omhillside@gmail.com";
+$Subject = "HillSide";
+$Name = $_POST['Name']; 
+$Email = $_POST['Email'];  
 
-$date=date("d.m.y"); 
- 
-$time=date("H:i"); 
+// prepare email body text
 
-$name=$_POST['name']; 
- 
-$email=$_POST['email'];
 
-mail("$adminemail", "$date $time Сообщение 
-от $name: $email");
+// send email 
+$success =  mail($EmailTo, $Subject,  "Имя:  $Name, Email: $Email" );
 
-?> 
+if ($success){
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=contactthanks.php\">";
+}
+
+?>

@@ -13,8 +13,11 @@
   }
 .container{
 	display: -webkit-flex;
+	display: flex;
 	-webkit-justify-content: center;
+	justify-content: center;
   -webkit-align-items: center;
+  align-items: center;
   height: 100vh;
 	color: white;
 	font-family: 'helveticaneue', Serif;
@@ -43,9 +46,6 @@
 
 
 .card__aftersend{
-	display: none;
-
-
 	p{
 	margin: 55px 75px 95px;
 	font-size: 26px;
@@ -99,8 +99,7 @@
 	}
 }
 
-.card.effect__move.flipped .card__front,
-.card.effect__move.flipped .card__aftersend {
+.card.effect__move.flipped .card__front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }
@@ -125,22 +124,13 @@
 
 }
 
-
 input:focus {
 	outline: none;
 }
 
-[type='email']::-webkit-input-placeholder {
-   color: white;
-}
 [type='email']:invalid {
    background-color: rgba(255,0,0,0.05);
 }
-[type='email']:valid {
-   background-color: rgba(0,255,0,0.05);
-}
-
-
 
 [type='image'] {
 	margin-top: 15px;

@@ -14,27 +14,16 @@
 		    <p >клубний будинок</p>
 		    </div>
 		  </div>
-		  <div class="card__aftersend">
-		  	<div class="card__aftersend--content">
-		  		<p>
-		  			Приглашение на презентацию
-						клубного дома Hill Side будет 
-						отправлено на ваш e-mail.
-					</p>
-					<hr>
-					<img src="assets/build/img/ty.png" alt="спасибо">
-		  	</div>
-		  </div>
 		  <div class="card__back">
 		    <div class="card__back--content ">
 		    	<p>Запуск проекта – совсем скоро.
 						Заполните форму ниже, и мы 
 						уведомим вас о старте продаж.
 					</p>
-					<form action="post.php" method="POST" class='contact-us'>
-						<input class='contact-us--name' type="text" name="client-name" placeholder="Имя" >
-						<input class='contact-us--email' type="email" name="clien-email" placeholder="vasya.pupkin@gmail.com">
-						<input class=".contact-us-submit" type="image" src="assets/build/img/send.png" name="submit-client-info" onsubmit="return false">
+					<form method="post" action="post.php" class='contact-us'>
+						<input class='contact-us--name' type="text" name="nameFF" placeholder="Имя" >
+						<input class='contact-us--email' type="email" name="contactFF" placeholder="E-mail">
+						<input class=".contact-us-submit" type="image" src="assets/build/img/send.png" name="submit">
 					</form>
 		    </div>
 		  </div>
@@ -43,7 +32,6 @@
 <script>
 	var card = document.querySelector(".card.effect__move");
 	var cardF = document.querySelector(".card__front");
-	var cardA = document.querySelector(".card__aftersend");
 	var submit = document.querySelector(".contact-us-submit");
 (function clickListener() {
     cardF.addEventListener( "mouseenter", function() {
@@ -51,15 +39,11 @@
       c.add("flipped");;}, 200)
     });
     submit.addEventListener( "click", function() {
-     	setTimeout(function() {
      	var c = card.classList;
-      cardA.style.display = 'block';
-      cardF.style.display = 'none';
-      c.remove("flipped");}, 1000)
+      c.remove("flipped")
     });
   }
 )();
-
 </script>
 </body>
 </html>
