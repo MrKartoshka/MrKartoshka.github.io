@@ -1,49 +1,393 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="assets/build/css/main.css">
-</head>
-<body>
-	<div class="container">
-		<div class="card effect__move">
-		  <div class="card__front">
-		    <div class="card__front--content">
-		    <img  src="assets/build/img/logo.png" alt="Hill Side">
-		    <p >клубний будинок</p>
-		    </div>
-		  </div>
-		  <div class="card__back">
-		    <div class="card__back--content ">
-		    	<p>Запуск проекта – совсем скоро.
-						Заполните форму ниже, и мы 
-						уведомим вас о старте продаж.
-					</p>
-					<form method="post" action="post.php" class='contact-us'>
-						<input class='contact-us--name' type="text" name="nameFF" placeholder="Имя" >
-						<input class='contact-us--email' type="email" name="contactFF" placeholder="E-mail">
-						<input class=".contact-us-submit" type="image" src="assets/build/img/send.png" name="submit">
-					</form>
-		    </div>
-		  </div>
-		</div>
-	</div>
-<script>
-	var card = document.querySelector(".card.effect__move");
-	var cardF = document.querySelector(".card__front");
-	var submit = document.querySelector(".contact-us-submit");
-(function clickListener() {
-    cardF.addEventListener( "mouseenter", function() {
-     setTimeout(function() { var c = card.classList;
-      c.add("flipped");;}, 200)
-    });
-    submit.addEventListener( "click", function() {
-     	var c = card.classList;
-      c.remove("flipped")
-    });
-  }
-)();
-</script>
-</body>
+<html lang="en" class="wide smoothscroll wow-animation">
+  <head>
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="css/style.css">
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Header-->
+      <header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" class="rd-navbar rd-navbar-bordered" data-md-layout="rd-navbar-static">
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <div class="rd-navbar-toggle-outer">
+                  <button data-rd-navbar-toggle=".rd-navbar-nav-wrap, .rd-navbar-toggle-outer" class="rd-navbar-toggle"><span></span></button>
+                </div>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a href="./"><span class="icon fl-continuous-house150"></span><span class="brand-name">real<span class='text-primary'>estate</span></span></a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap">
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Portfolio</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="#">Masonry style</a></li>
+                      <li><a href="#">Grid style</a></li>
+                      <li><a href="#">Justified style</a></li>
+                      <li><a href="#">List style</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Page Content-->
+      <main class="page-content">
+        <section>
+          <!-- Swiper-->
+          <div data-dragable="false" data-height="100vh" data-min-height="560px" class="swiper-container swiper-slider">
+            <div class="swiper-wrapper">
+              <div data-slide-bg="images/slider-01.jpg" class="swiper-slide">
+                <div class="swiper-slide-caption">
+                  <div class="container"><span data-caption-animate="fadeIn" class="veil reveal-sm-inline-block icon icon-xl fl-continuous-house150"></span>
+                    <h1 data-caption-animate="fadeInUp" data-caption-delay="300">Attractive home purchase offers</h1>
+                    <div data-caption-animate="fadeInUp" data-caption-delay="600" class="row">
+                      <div class="col-md-10 col-md-offset-1">
+                        <p class="veil reveal-md-block big text-light">We deal with different kinds of properties. <br class='veil reveal-lg-block'> No matter what you need a house, an apartment or garage – you’ll find a good option on our site.<br class='veil reveal-lg-block'> Thousands of offers and the best prices are guaranteed. Start browsing now! </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-slide-bg="images/slider-02.jpg" class="swiper-slide">
+                <div class="swiper-slide-caption">
+                  <div class="container"><span data-caption-animate="fadeIn" class="veil reveal-sm-inline-block icon icon-xl fl-continuous-house150"></span>
+                    <h1 data-caption-animate="fadeInUp" data-caption-delay="300">Attractive home purchase offers</h1>
+                    <div data-caption-animate="fadeInUp" data-caption-delay="600" class="row">
+                      <div class="col-md-10 col-md-offset-1">
+                        <p class="veil reveal-md-block big text-light">We deal with different kinds of properties. <br class='veil reveal-lg-block'> No matter what you need a house, an apartment or garage – you’ll find a good option on our site.<br class='veil reveal-lg-block'> Thousands of offers and the best prices are guaranteed. Start browsing now! </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-slide-bg="images/slider-03.jpg" class="swiper-slide">
+                <div class="swiper-slide-caption">
+                  <div class="container"><span data-caption-animate="fadeIn" class="veil reveal-sm-inline-block icon icon-xl fl-continuous-house150"></span>
+                    <h1 data-caption-animate="fadeInUp" data-caption-delay="300">Attractive home purchase offers</h1>
+                    <div data-caption-animate="fadeInUp" data-caption-delay="600" class="row">
+                      <div class="col-md-10 col-md-offset-1">
+                        <p class="veil reveal-md-block big text-light">We deal with different kinds of properties. <br class='veil reveal-lg-block'> No matter what you need a house, an apartment or garage – you’ll find a good option on our site.<br class='veil reveal-lg-block'> Thousands of offers and the best prices are guaranteed. Start browsing now! </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Swiper Pagination-->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!-- RD Parallax-->
+        <section class="rd-parallax light-context">
+          <div data-speed="0.5" data-type="media" data-url="images/index-02.jpg" class="rd-parallax-layer"></div>
+          <div data-speed="0" data-type="html" class="rd-parallax-layer">
+            <div class="shell section-85 section-xl-182">
+              <div class="range">
+                <div class="cell-md-3 cell-sm-6">
+                  <div class="box box-hover">
+                    <h4 class="heading-divider heading-divider-light">Mortgage</h4><span class="icon icon-lg icon-whitet fl-continuous-clock101"></span>
+                    <p>A little as 5% deposit can be saved to receive your new mortgage. Using mortgage calculators is quick and easy.</p>
+                  </div>
+                </div>
+                <div class="cell-md-3 cell-sm-6 offset-top-50 offset-sm-top-0">
+                  <div class="box box-hover">
+                    <h4 class="heading-divider heading-divider-light">Rentals</h4><span class="icon icon-lg icon-whitet fl-continuous-key174"></span>
+                    <p>We have good offers both for rent and purchase. So, every client will be satisfied with our services.</p>
+                  </div>
+                </div>
+                <div class="cell-md-3 cell-sm-6 offset-top-50 offset-md-top-0">
+                  <div class="box box-hover">
+                    <h4 class="heading-divider heading-divider-light">Office spaces</h4><span class="icon icon-lg icon-whitet fl-continuous-folder242"></span>
+                    <p>No matter what you need a house, an apartment or office – you’ll find a good option on our site.</p>
+                  </div>
+                </div>
+                <div class="cell-md-3 cell-sm-6 offset-top-50 offset-md-top-0">
+                  <div class="box box-hover">
+                    <h4 class="heading-divider heading-divider-light">Loans</h4><span class="icon icon-lg icon-whitet fl-continuous-padlock45"></span>
+                    <p>You will find plenty of variants that fit absolutely different requirements. Try out our service!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-85 section-xl-top-182 section-xl-bottom-164">
+          <div class="shell text-left">
+            <h4 class="heading-divider">Grid type</h4>
+            <!-- Isotope filters-->
+            <ul class="isotope-filters h6">
+              <li><a data-isotope-filter="*" data-isotope-group="gallery" class="active">Show all</a></li>
+              <li><a data-isotope-filter="type-1" data-isotope-group="gallery">Category 1</a></li>
+              <li><a data-isotope-filter="type-2" data-isotope-group="gallery">Category 2</a></li>
+              <li><a data-isotope-filter="type-3" data-isotope-group="gallery">Category 3</a></li>
+            </ul>
+          </div>
+          <!-- Isotope-->
+          <div class="isotope-layout-1">
+            <div data-isotope-layout="fitRows" data-isotope-group="gallery" class="row isotope">
+              <div data-filter="type-1" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/tap.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="blog_single_post.html">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-02.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-3" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-03.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-2" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-04.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-1" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-01.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-02.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-3" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-03.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-2" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-04.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-1" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-01.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-02.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-3" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-03.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-2" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-04.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-1" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-01.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-02.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-3" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-03.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-filter="type-2" class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="thumbnail-variant-1"><img alt="" width="506" height="475" src="images/portfolio-04.jpg" class="img-responsive">
+                  <div class="caption">
+                    <h5><a href="#">Find a Home</a></h5>
+                    <p>We can show you any home anytime<br> that is convenient to you.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="rd-parallax light-context">
+          <div data-speed="0.2" data-type="media" data-url="images/news-01.jpg" class="rd-parallax-layer"></div>
+          <div data-speed="0" data-type="html" class="rd-parallax-layer">
+            <div class="shell text-md-left section-85 section-xl-top-182 section-xl-bottom-164">
+              <h4 class="heading-divider">Latest news</h4>
+              <div class="range">
+                <div class="cell-md-4 cell-sm-6 post-news"><img alt="" width="370" height="326" src="images/news-02.jpg" class="center-block img-responsive">
+                  <time datetime="2016-06-06" class="h6 text-medium post-news-time">23/10/2015</time>
+                  <h6 class="text-medium"><a href="blog_single_post.html">Berlin’s Housing Problems Boil Over.</a></h6>
+                  <p>When a German property developer tried to hold a meet-and-greet barbecue for neighbors of its new 68-unit condominium in August, protesters flooded the site, waving signs and dumping piles of garbage before police clad in bulletproof vests halted further unrest.</p>
+                </div>
+                <div class="cell-md-4 cell-sm-6 offset-top-80 offset-sm-top-0"><img alt="" width="370" height="326" src="images/news-03.jpg" class="center-block img-responsive">
+                  <time datetime="2016-06-06" class="h6 text-medium post-news-time">26/10/2015</time>
+                  <h6 class="text-medium"><a href="blog_single_post.html">Don’t gamble with real estate.</a></h6>
+                  <p>Too often, the real estate market shifts. For one part of the year, home sellers can find quick opportunities to sell their home for the most value. Other parts of the year, buyers can grab local deals in their market with discount.</p>
+                </div>
+                <div class="cell-md-4 cell-md-preffix-0 cell-sm-8 cell-sm-preffix-2 offset-top-80 offset-md-top-0"><img alt="" width="370" height="326" src="images/news-04.jpg" class="center-block img-responsive">
+                  <time datetime="2016-06-06" class="h6 text-medium post-news-time">27/10/2015</time>
+                  <h6 class="text-medium"><a href="blog_single_post.html">Inventory of homes on the market.</a></h6>
+                  <p>In this chart, you can see the current inventory level of the housing market to date. On the vertical axis, you can see how many home are for sale while on the horizontal axis, you can see the shift in the market over time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="rd-google-map">
+          <div id="google-map" class="rd-google-map__model"></div>
+          <ul class="rd-google-map__locations">
+            <li data-x="-73.9874068" data-y="40.643180">
+              <p>9870 St Vincent Place, Glasgow, DC 45 Fr 45.<span>800 2345-6789</span></p>
+            </li>
+          </ul>
+        </section>
+        
+        <section class="section-164">
+          <div class="shell">
+            <h4 class="heading-divider text-left text-nowrap">Contact Information</h4>
+            <div class="range text-left">
+              <div class="cell-md-4">
+                <address class="contact-info"><span class="icon icon-default fa-home"></span>
+                  <div class="h6 text-medium">Address:</div>
+                  <p><a href="#">The Company Name Inc. 9870 St Vincent Place, Glasgow, DC 45</a></p>
+                </address>
+              </div>
+              <div class="cell-md-4 cell-sm-6 offset-top-50 offset-md-top-0">
+                <address class="contact-info"><span class="icon icon-default fa-phone"></span>
+                  <div class="h6 text-medium">Phones:</div>
+                  <p><a href="callto:#">800-2345-7892</a></p>
+                  <p class="offset-top-0"><a href="callto:#">800-2345-7893</a></p>
+                </address>
+              </div>
+              <div class="cell-md-4 cell-sm-6 offset-top-50 offset-md-top-0">
+                <address class="contact-info"><span class="icon icon-default fa-envelope"></span>
+                  <div class="h6 text-medium">E-mail:</div>
+                  <p><a href="mailto:#">mail@demolink.org</a></p>
+                </address>
+              </div>
+            </div>
+            <h4 class="offset-top-80 heading-divider text-left text-nowrap">Contact Us</h4>
+            <form data-result-class="rd-mailform-validate" data-form-type="contact" method="post" action="bat/rd-mailform.php" class="offset-top-70 text-md-left rd-mailform">
+              <div class="range">
+                <div class="cell-md-4">
+                  <input type="text" name="name" data-constraints="@NotEmpty" placeholder="Your name">
+                </div>
+                <div class="cell-md-4">
+                  <input type="text" name="email" data-constraints="@NotEmpty @Email" placeholder="Email">
+                </div>
+                <div class="cell-md-4">
+                  <input type="text" name="phone" data-constraints="@NotEmpty @NumbersOnly" placeholder="Phone">
+                </div>
+              </div>
+              <textarea name="message" data-constraints="@NotEmpty" placeholder="Your message"></textarea>
+              <!-- Rd Mailform result field-->
+              <div class="rd-mailform-validate"></div>
+              <button class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer style="background-image: url(images/footer-01.jpg); background-size: cover;" class="page-footer light-context">
+        <section>
+          <div class="shell">
+            <div class="range range-md-middle">
+              <div class="cell-md-6 text-md-left cell-md-push-1">
+                <ul class="list-inline">
+                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-facebook-square"></a></li>
+                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-google-plus-square"></a></li>
+                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-twitter"></a></li>
+                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-pinterest"></a></li>
+                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-linkedin-square"></a></li>
+                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-instagram"></a></li>
+                </ul>
+              </div>
+              <div class="cell-md-6 text-md-left">
+                <p class="p extra-small text-uppercase">real estate © <span id='copyright-year'></span> • <a href='privacy.html'>Privacy Policy</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <!-- FOOTER LINK-->
+    </div>
+    <!-- Java script-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js">  </script>
+  </body>
 </html>
