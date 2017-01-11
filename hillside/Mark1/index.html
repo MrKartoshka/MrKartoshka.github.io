@@ -37,20 +37,12 @@
               <div class="rd-navbar-nav-wrap">
                 <!-- RD Navbar Nav-->
                 <ul class="rd-navbar-nav">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Portfolio</a>
-                    <!-- RD Navbar Dropdown-->
-                    <ul class="rd-navbar-dropdown">
-                      <li><a href="#">Masonry style</a></li>
-                      <li><a href="#">Grid style</a></li>
-                      <li><a href="#">Justified style</a></li>
-                      <li><a href="#">List style</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="contacts.html">Contacts</a></li>
+                  <li class="active"><a href="index.html">Головна</a></li>
+                  <li><a href="#about">Про будинок</a></li>
+                  <li><a href="#apartments">Планування</a></li>
+                  <li><a href="#news-blog">Хід будівництва</a></li>
+                  <li><a href="#map-position">Розташування</a></li>
+                  <li><a href="#contacts">Контакти</a></li>
                 </ul>
               </div>
             </div>
@@ -105,7 +97,7 @@
           </div>
         </section>
         <!-- RD Parallax-->
-        <section class="rd-parallax light-context">
+        <section class="rd-parallax light-context" id="about">
           <div data-speed="0.5" data-type="media" data-url="images/index-02.jpg" class="rd-parallax-layer"></div>
           <div data-speed="0" data-type="html" class="rd-parallax-layer">
             <div class="shell section-85 section-xl-182">
@@ -138,7 +130,7 @@
             </div>
           </div>
         </section>
-        <section class="section-85 section-xl-top-182 section-xl-bottom-164">
+        <section class="section-85 section-xl-top-182 section-xl-bottom-164" id="apartments">
           <div class="shell text-left">
             <h4 class="heading-divider">Grid type</h4>
             <!-- Isotope filters-->
@@ -283,7 +275,7 @@
             </div>
           </div>
         </section>
-        <section class="rd-parallax light-context">
+        <section class="rd-parallax light-context" id="news-blog">
           <div data-speed="0.2" data-type="media" data-url="images/news-01.jpg" class="rd-parallax-layer"></div>
           <div data-speed="0" data-type="html" class="rd-parallax-layer">
             <div class="shell text-md-left section-85 section-xl-top-182 section-xl-bottom-164">
@@ -309,7 +301,7 @@
           </div>
         </section>
 
-        <section class="rd-google-map">
+        <section class="rd-google-map" id="map-position">
           <div id="google-map" class="rd-google-map__model"></div>
           <ul class="rd-google-map__locations">
             <li data-x="-73.9874068" data-y="40.643180">
@@ -318,7 +310,7 @@
           </ul>
         </section>
         
-        <section class="section-164">
+        <section class="section-164" id="contacts">
           <div class="shell">
             <h4 class="heading-divider text-left text-nowrap">Contact Information</h4>
             <div class="range text-left">
@@ -363,27 +355,6 @@
           </div>
         </section>
       </main>
-      <footer style="background-image: url(images/footer-01.jpg); background-size: cover;" class="page-footer light-context">
-        <section>
-          <div class="shell">
-            <div class="range range-md-middle">
-              <div class="cell-md-6 text-md-left cell-md-push-1">
-                <ul class="list-inline">
-                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-facebook-square"></a></li>
-                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-google-plus-square"></a></li>
-                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-twitter"></a></li>
-                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-pinterest"></a></li>
-                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-linkedin-square"></a></li>
-                  <li><a href="#" class="icon icon-sm icon-circle icon-white fa-instagram"></a></li>
-                </ul>
-              </div>
-              <div class="cell-md-6 text-md-left">
-                <p class="p extra-small text-uppercase">real estate © <span id='copyright-year'></span> • <a href='privacy.html'>Privacy Policy</a></p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </footer>
       <!-- FOOTER LINK-->
     </div>
     <!-- Java script-->
