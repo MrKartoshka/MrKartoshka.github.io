@@ -87,6 +87,13 @@
  * Bootstrap Framework
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+@font-face {
+  font-family: 'XtreemThin';
+  src: url('../fonts/xtreemthin-webfont.woff2') format('woff2'),
+       url('../fonts/xtreemthin-webfont.woff') format('woff');
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -26994,7 +27001,7 @@ img.mfp-img {
   position: relative;
   top: 2px;
   font-size: 20px;
-  font-family: "Pacifico";
+  font-family: "XtreemThin";
   margin-left: 33px;
   vertical-align: middle;
   color: #fff;
@@ -32187,7 +32194,7 @@ label span {
 
 .hs-logo{
   width: auto;
-  height: 40px;
+  height: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */
