@@ -21413,8 +21413,8 @@ html body .thumbnail-variant-3:hover img {
 }
 
 .section-85 {
-  padding-top: 85px;
-  padding-bottom: 85px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .section-100 {
@@ -22247,19 +22247,19 @@ html .page .offset-top-80 {
 
 @media (min-width: 992px) {
   .box .heading-divider {
-    padding-top: 85px;
-    padding-bottom: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .box .icon-lg {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 @media (min-width: 992px) {
   .box .icon-lg {
-    margin: 100px auto 80px auto;
+    margin: 40px auto 40px auto;
   }
 }
 
@@ -32210,14 +32210,8 @@ label span {
   height: 200px;
 }
 
-.about_text{
-  margin-bottom: 50px;
-}
-  
-}
 
-.about_text{
-  margin-bottom: -200px;
+  
 }
 
 .header-logo{
