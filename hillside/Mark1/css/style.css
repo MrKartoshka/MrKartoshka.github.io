@@ -32197,4 +32197,32 @@ label span {
   height: 150px;
 }
 
+.hs-logo-img
+{
+  width: auto;
+  height: 400px;
+}
+
+@media (max-width: 400px) {
+  .hs-logo-img
+{
+  width: auto;
+  height: 200px;
+}
+
+.about_text{
+  margin-bottom: -100px;
+}
+  
+}
+
+.about_text{
+  margin-bottom: -200px;
+}
+
+.header-logo{
+  width: auto;
+  height: 100px;
+}
+
 /*# sourceMappingURL=style.css.map */
