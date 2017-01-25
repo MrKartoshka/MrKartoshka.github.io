@@ -32217,6 +32217,11 @@ label span {
 .about_text {
   padding-top: 100px;
   font-size: 20px;
+
+}
+
+.text-20{
+font-size: 20px;  
 }
 .header-logo{
   width: auto;
@@ -32233,4 +32238,8 @@ label span {
 
 }
 
+
+.img-m-20{
+  margin-top: 20px;
+}
 /*# sourceMappingURL=style.css.map */
