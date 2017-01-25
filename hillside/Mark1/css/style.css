@@ -32210,13 +32210,23 @@ label span {
   height: 200px;
 }
 
-
-  
+ 
 }
 
+
+.about_text {
+  font-size: 20px;
+  text-align: left;
+}
 .header-logo{
   width: auto;
   height: 100px;
+}
+
+.parking{
+  font-size: 150px;
+  font-weight: 300;
+
 }
 
 /*# sourceMappingURL=style.css.map */
