@@ -32215,8 +32215,8 @@ label span {
 
 
 .about_text {
+  padding-top: 80px;
   font-size: 20px;
-  text-align: left;
 }
 .header-logo{
   width: auto;
@@ -32224,8 +32224,11 @@ label span {
 }
 
 .parking{
+  display: inline-block;
   font-size: 150px;
   font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;  
 
 }
 
