@@ -10644,6 +10644,15 @@ fieldset[disabled] .btn-primary {
   font-size: 20px;
 }
 
+.icon-35 {
+  font-size: 35px;
+  color: white;
+}
+
+.icon-35:hover {
+  color: #f6c452;
+}
+
 .icon-lg {
   font-size: 92px;
 }
