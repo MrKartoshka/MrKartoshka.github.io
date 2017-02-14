@@ -32260,7 +32260,9 @@ font-size: 20px;
 
 .fullscrean-img{
   width: 100vw;
-  height: auto;
-  max-height: 100vh;
+  height: 100vh;
+  background-image: url('../images/about_img.png');
+  background-position: center center;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
