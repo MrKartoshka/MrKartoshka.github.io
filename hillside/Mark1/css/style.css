@@ -32271,4 +32271,10 @@ font-size: 15px;
   background-position: center center;
   background-size: cover;
 }
+
+.custom-img-icons {
+  height: 62px;
+  width: auto;
+  margin-bottom: 30px;
+}
 /*# sourceMappingURL=style.css.map */
