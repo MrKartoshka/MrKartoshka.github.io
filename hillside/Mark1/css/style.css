@@ -10242,7 +10242,7 @@ ol {
 
 .contact-info h6 + *,
 .contact-info .h6 + * {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .terms-list dt + dd {
@@ -10365,7 +10365,8 @@ ol {
 }
 
 address p + p {
-  margin-top: 20px;
+  font-size: 15px;
+  margin-top: 10px;
 }
 
 body {
@@ -10646,6 +10647,7 @@ fieldset[disabled] .btn-primary {
 
 .icon-35 {
   font-size: 35px;
+  letter-spacing: 15px;
   color: white;
 }
 
@@ -32231,6 +32233,10 @@ label span {
 
 .text-20{
 font-size: 20px;  
+}
+
+.text-15{
+font-size: 15px;  
 }
 .header-logo{
   width: auto;
