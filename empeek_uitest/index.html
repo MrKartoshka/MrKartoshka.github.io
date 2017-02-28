@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="store">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="build/css/main.css">
 </head>
-<body>
+<body ng-controller='StoreController as store'>
+<ul class="list-group"></ul>
+	<li class="list-group-item" ng-repeat='product in store.products'>
+		<h3>
+			{{product.name}}
+			<em class='pull-right'> 
+				{{product.price  | currency}}
+			</em>
+			<img ng-src="{{product.images[1].full}}" alt="product-image">
+		</h3>
+	</li>
+</ul>
 	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="build/js/app.js"></script>
 </body>
 </html>
