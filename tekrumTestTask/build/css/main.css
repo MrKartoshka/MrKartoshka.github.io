@@ -6400,27 +6400,35 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-weight: normal;
   font-style: normal; }
 
-* {
-  box-sizing: border-box;
-  outline: 1px solid red; }
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy/Gilroy-ExtraBold.otf");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy/Gilroy-Light.otf");
+  font-weight: 100;
+  font-style: normal; }
 
 body {
   background: #e46690 url("../img/tekrumBg.jpg");
-  background-size: cover; }
+  text-transform: uppercase; }
 
 h1 {
   font-size: 48px;
   font-family: Evogria;
   color: white;
   text-align: center;
-  text-transform: uppercase;
   margin-top: 170px;
   margin-bottom: 85px; }
 
 .s-showcase {
   font-family: BebasNeue;
   color: white;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 150px; }
   .s-showcase .product-image {
     width: 180px;
     height: auto;
@@ -6428,9 +6436,10 @@ h1 {
     margin: 0 auto; }
   .s-showcase .product-gradient {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-    margin: 0 10px; }
+    margin: 0 10px;
+    padding-bottom: 45px;
+    max-height: 715px; }
   .s-showcase .product-name {
-    text-transform: uppercase;
     font-size: 36px; }
   .s-showcase .product-sale--text {
     font-size: 24px;
@@ -6449,8 +6458,12 @@ h1 {
     overflow: hidden;
     display: inline-block;
     vertical-align: top;
-    background: url("../img/arrow-down.png") no-repeat 75% transparent;
+    background: url("../img/arrow-down.png") no-repeat 100% transparent;
     width: 60px; }
+  .s-showcase p::-moz-selection {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .s-showcase p::selection {
+    background-color: rgba(0, 0, 0, 0.5); }
   .s-showcase .product-amount {
     width: 60px;
     padding-left: 15px;
@@ -6465,22 +6478,163 @@ h1 {
     appearance: none; }
     .s-showcase .product-amount:focus {
       outline: none; }
+    .s-showcase .product-amount::-webkit-scrollbar {
+      width: 3px;
+      height: 40px; }
+    .s-showcase .product-amount::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px transparent; }
+    .s-showcase .product-amount::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
   .s-showcase .product-buy {
+    position: relative;
     height: 45px;
+    width: 67px;
+    background-color: transparent;
     padding: 10px 18px;
     margin-left: 25px;
     border: 3px solid #fff;
-    border-radius: 45px; }
+    border-radius: 45px;
+    cursor: pointer; }
     .s-showcase .product-buy:hover {
       background-color: #ff8b24;
       border-color: #ff8b24;
       transition: 0.5s; }
+    .s-showcase .product-buy:active {
+      outline: 0;
+      box-shadow: 0 5px #666; }
+    .s-showcase .product-buy:focus {
+      outline: 0; }
+    .s-showcase .product-buy img {
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translateX(-50%);
+      transform: translateY(-50%); }
+    .s-showcase .product-buy p {
+      visibility: hidden;
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden; }
   .s-showcase:before {
     content: url(../img/wooden-plank.png);
     position: absolute;
     display: block;
     transform: translate(0px, 400px);
-    z-index: 10; }
+    z-index: 5; }
+
+.shopCart {
+  display: none;
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.77);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s; }
+
+.shopCart-content {
+  position: absolute;
+  right: 0;
+  width: 475px;
+  height: 100%;
+  background-color: white;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s; }
+
+.shopCart-header {
+  position: relative;
+  height: 225px;
+  line-height: 225px;
+  white-space: nowrap;
+  background-color: #ff943d;
+  color: white;
+  text-align: center;
+  margin: 0;
+  cursor: pointer; }
+  .shopCart-header h2 {
+    line-height: 225px;
+    font-family: 'BebasNeue';
+    font-size: 60px; }
+
+.shopCart-close {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  opacity: 1; }
+
+.shopCart-item {
+  margin: 25px 65px 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9; }
+  .shopCart-item .product-image--small {
+    float: left;
+    height: 115px;
+    width: auto;
+    margin-right: 35px; }
+  .shopCart-item .product-description {
+    font-family: Gilroy;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 1; }
+    .shopCart-item .product-description .product-name {
+      font-size: 18px;
+      margin-bottom: 10px; }
+    .shopCart-item .product-description .product-price {
+      font-weight: 800;
+      margin-top: 10px; }
+    .shopCart-item .product-description p {
+      margin: 0; }
+
+.shopCart-summary {
+  margin: 30px 65px 20px;
+  font-family: Gilroy;
+  font-weight: 100;
+  line-height: 1; }
+  .shopCart-summary .summary-name {
+    font-size: 30px; }
+  .shopCart-summary .summary-price {
+    font-size: 48px; }
+
+.shopCart-footer {
+  text-align: center;
+  padding: 20px 0px;
+  border-top: 1px solid #d9d9d9; }
+
+.order-products {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: #faa21b;
+  color: white;
+  text-decoration: none;
+  cursor: pointer; }
+  .order-products:hover {
+    background-color: #323232; }
+  .order-products:active {
+    box-shadow: 0 5px #666; }
+
+@keyframes slideIn {
+  from {
+    right: -480px;
+    opacity: 0; }
+  to {
+    right: 0;
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 @media (max-width: 1200px) {
   .s-showcase::before {

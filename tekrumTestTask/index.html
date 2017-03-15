@@ -20,7 +20,10 @@
 					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
 					</select>
 				</div>
-				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+				<button class="product-buy" onclick="showPopUp()">
+					<p class="hidden-description">add to the cart</p>
+					<img src="build/img/cart.png" alt="add to the cart">
+				</button>
 			</div>
 		</div>
 		<div class="col-lg-6 col-xl-3">
@@ -34,7 +37,10 @@
 					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
 					</select>
 				</div>
-				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+				<button class="product-buy" onclick="showPopUp()">
+					<p class="hidden-description">add to the cart</p>
+					<img src="build/img/cart.png" alt="add to the cart">
+				</button>
 				</div>
 			</div>
 		<div class="col-lg-6 col-xl-3">
@@ -48,7 +54,10 @@
 					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
 					</select>
 				</div>
-				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+				<button class="product-buy" onclick="showPopUp()">
+					<p class="hidden-description">add to the cart</p>
+					<img src="build/img/cart.png" alt="add to the cart">
+				</button>
 				</div>
 			</div>
 		<div class="col-lg-6 col-xl-3">
@@ -62,11 +71,56 @@
 					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
 					</select>
 				</div>
-				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+				<button class="product-buy" onclick="showPopUp()">
+					<p class="hidden-description">add to the cart</p>
+					<img src="build/img/cart.png" alt="add to the cart">
+				</button>
 				</div>
 			</div>
 		</div>
 	</section>
+	<div id="popUp-shopCart" class="shopCart">
+		<div class="shopCart-content">
+		    <div class="shopCart-header">
+		      <img src="build/img/shevrone-right.png" class="shopCart-close">
+		      <h2>Carello</h2>
+		    </div>
+		    <div class="shopCart-body">
+		    	<div class="shopCart-item">
+		    		<img src="build/img/btl-sm-1.png" class="product-image--small" alt="product image small">
+		    		<div class="product-description">
+		    			<p class="product-name">offerta <br>fizzyslim con sapore di ananas</p>
+		    			<p class="product-qte">QTÀ: 3</p>
+		    			<p class="product-price">€25.50</p>
+		    		</div>
+		    	</div>
+		    	<div class="shopCart-item">
+		    		<img src="build/img/btl-sm-1.png" class="product-image--small" alt="product image small">
+		    		<div class="product-description">
+		    			<p class="product-name">offerta <br>fizzyslim con sapore di ananas</p>
+		    			<p class="product-qte">QTÀ: 3</p>
+		    			<p class="product-price">€25.50</p>
+		    		</div>
+		    	</div>
+		    	<div class="shopCart-item">
+		    		<img src="build/img/btl-sm-1.png" class="product-image--small" alt="product image small">
+		    		<div class="product-description">
+		    			<p class="product-name">offerta <br>fizzyslim con sapore di ananas</p>
+		    			<p class="product-qte">QTÀ: 3</p>
+		    			<p class="product-price">€25.50</p>
+		    		</div>
+		    	</div>
+		    	<div class="shopCart-summary">
+		    		<p class="summary-name">Subtotale</p>
+		    		<p class="summary-price">€455.00</p>
+		    	</div>
+		    	<div class="shopCart-footer">
+		    	<button type="button" id="order"  class="btn btn-lg order-products ">VISUALIZZA CARRELLO</button>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+
 	<script>
 	var amounts = document.getElementsByClassName('product-amount');
 	for(var a = 0; a < amounts.length; a++) {
@@ -79,6 +133,28 @@
 		}
 		}
 		amounts[a].innerHTML = select;
+	}
+
+	var modal = document.getElementById('popUp-shopCart');
+	var buy = document.getElementById('order');
+	var close = document.getElementsByClassName("shopCart-close")[0];
+
+	showPopUp = function() {
+	    modal.style.display = "block";
+	}
+
+	close.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	buy.onclick = function() {
+	    modal.style.display = "none";
+	}
+
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
 	}
 	</script>
 </body>
