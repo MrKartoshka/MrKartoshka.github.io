@@ -6412,6 +6412,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-weight: 100;
   font-style: normal; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   background: #e46690 url("../img/tekrumBg.jpg");
   text-transform: uppercase; }
