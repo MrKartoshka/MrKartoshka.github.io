@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FizzySlim</title>
+	<link rel="stylesheet" href="build/css/main.css">
+</head>
+<body>
+	<h1>Cassa</h1>
+	<section class='s-showcase container'>
+	<div class="row">
+		<div class="col-lg-6 col-xl-3 ">
+			<div class="product-gradient">
+				<p class="product-name">Pineapple</p>
+				<img src="build/img/btl-4.png" alt="pineapple bottle" class="product-image">
+				<p class="product-sale--text">Offerta limitata - 50%</p>
+				<p class="product-sale--price">$8.50<sup>19.00$</sup></p>
+				<div class="arrow-box">
+					<select name="amount" class="product-amount"
+					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+					</select>
+				</div>
+				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+			</div>
+		</div>
+		<div class="col-lg-6 col-xl-3">
+			<div class="product-gradient">
+			<p class="product-name">Berries</p>
+				<img src="build/img/btl-3.png" alt="pineapple bottle" class="product-image">
+				<p class="product-sale--text">Offerta limitata - 50%</p>
+				<p class="product-sale--price">$8.50<sup>19.00$</sup></p>
+				<div class="arrow-box">
+					<select name="amount" class="product-amount"
+					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+					</select>
+				</div>
+				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+				</div>
+			</div>
+		<div class="col-lg-6 col-xl-3">
+			<div class="product-gradient">
+			<p class="product-name">Grapefruit</p>
+				<img src="build/img/btl-2.png" alt="pineapple bottle" class="product-image">
+				<p class="product-sale--text">Offerta limitata - 50%</p>
+				<p class="product-sale--price">$8.50<sup>19.00$</sup></p>
+				<div class="arrow-box">
+					<select name="amount" class="product-amount"
+					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+					</select>
+				</div>
+				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+				</div>
+			</div>
+		<div class="col-lg-6 col-xl-3">
+			<div class="product-gradient">
+			<p class="product-name">Apple</p>
+				<img src="build/img/btl-1.png" alt="pineapple bottle" class="product-image">
+				<p class="product-sale--text">Offerta limitata - 50%</p>
+				<p class="product-sale--price">$8.50<sup>19.00$</sup></p>
+				<div class="arrow-box">
+					<select name="amount" class="product-amount"
+					onfocus='this.size=4;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+					</select>
+				</div>
+				<img src="build/img/cart.png" class="product-buy" alt="add to the shopping  cart">
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+	var amounts = document.getElementsByClassName('product-amount');
+	for(var a = 0; a < amounts.length; a++) {
+		var select = '';
+		for (i=1;i<=50;i++){
+			if (i == 4) {
+				select += '<option selected="selected" val=' + i + '>' + i + '</option>'
+			} else {
+		  		select += '<option val=' + i + '>' + i + '</option>';
+		}
+		}
+		amounts[a].innerHTML = select;
+	}
+	</script>
+</body>
+</html>
