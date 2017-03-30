@@ -37,19 +37,6 @@ src: url('../fonts/MuseoSansCyrl.woff2') format('woff2');
 	}
 } 
 
-
-@media only screen and (max-width : 1024px) {
-	.btn {
-		padding: 25px 20px;
-	}
-}
-@media only screen and (max-width : 640px) {
-	.btn{
-		padding: 24px 21px;
-		border: 3px solid #000;
-	}
-}
-
 .bd-wave {
 	border-image-source: url($admin-control-image_bd);
 	border-image-slice: 100% 0%;
@@ -58,7 +45,7 @@ src: url('../fonts/MuseoSansCyrl.woff2') format('woff2');
 
 body {
 	background-image: url($body-image_bg);
-	background-size: auto 100vh; 
+	background-size: auto 100vh;
 	background-position: center top;
 	background-attachment: fixed;
 
@@ -68,28 +55,11 @@ body {
 	background-color: $container-color_bg;
 	border: 8px solid $container-color_bd;
 	box-shadow: 0px 0px 0px 3px rgb(255,255,255);
+	width: 1400px;
 	border-radius: 12px;
-	width: 100%;
-	max-width: 1400px;
-	min-width: 300px;
-	margin: 206px auto 248px;
-	padding: 34px 55px 50px 45px; 
+	margin: 206px auto 100px;
+	padding: 34px 55px 50px 47px; 
 
-}
-
-@media only screen and (max-width : 1024px) {
-	.main-container {
-		width: 80%; 
-		margin: 135px auto 100px;
-		padding: 25px 11px 25px 32px;  
-	}
-}
-@media only screen and (max-width : 1024px) {
-	.main-container {
-		border: 5px solid $container-color_bd;
-		margin: 68px auto 100px;
-		padding: 8px 7px 45px 6px; ;
-	}
 }
 
 .container-row{

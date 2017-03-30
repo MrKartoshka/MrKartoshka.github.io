@@ -2,22 +2,63 @@
 	margin-top: 50px; 
 }
 
-.card_barcode{
-	width: 246px;
-	height: 152px; 
+
+@media only screen and (max-width : 1024px) {
+	.container-card {
+		margin-top: 40px; 
+	}
 }
 
-.card_qrcode{
-	width: 219px;
-	height: 219px;  
+@media only screen and (max-width : 640px) {
+	.container-card {
+		margin-top: 30px; 
+	}
 }
+.card_qrcode,
+.card_barcode {
+
+	background-position: center top;
+	background-repeat:no-repeat;
+    background-size:contain;
+
+	img {
+	width: auto;
+}
+}
+
+.card_barcode{
+	width: 20%;
+	background-image: url($code-image_bc);
+}
+.card_qrcode{
+  width: 18%;
+  background-image: url($code-image_qr);
+}
+
 
 .container-card_text{
+	width: 61%;
 	font-size: 20px;
 	font-family: MuseoSansCyrl;
-	margin-left: 29px;
-	margin-right: 41px;
+	margin-left: 20px;
+	margin-right: 20px;
 	margin-top: 0px;
 	border-bottom: 20px solid transparent; 
 	padding-bottom: 35px;
+}
+
+@media only screen and (max-width : 1024px) {
+	.container-card_text{
+		font-size: 15px;
+		border-bottom: 10px solid transparent; 
+		padding-bottom: 22px;
+	}
+}
+
+@media only screen and (max-width : 640px) {
+	.container-card_text{
+		font-size: 8px;
+		border-bottom: 7px solid transparent;
+		padding-bottom: 30px;
+	}
 }
