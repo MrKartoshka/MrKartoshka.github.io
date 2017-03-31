@@ -1,102 +1,110 @@
 <!DOCTYPE HTML>
-<html ng-app="purchaseApp">
-
+<html ng-app="listApp"
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <style>
+        .sortorder:after {
+            content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+        }
+        .sortorder.reverse:after {
+            content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+        }
+    </style>
 </head>
 
-<body  ng-controller="purchaseController">
-
-  <button onclick="vote()" id="button">Голосовать!</button>
-
-  <script>
-    function vote() {
-      button.innerHTML = ' ... ';
-
-      var xhr = new XMLHttpRequest();
-
-      xhr.open('GET', 'vote', true);
-
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState != 4) return;
-
-        if (xhr.status != 200) {
-          // обработать ошибку
-          alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
-          return;
-        }
-
-        // обработать результат
-        button.innerHTML = xhr.responseText;
-      }
-
-      xhr.send(null);
-
-    }
-  </script>
+<body>
 
     <div   class="page-header" >
-        <h1> Список покупок </h1>
+        <h1> Products list</h1>
+        
     </div>
-    <div class="panel">
+    <div class="panel"  ng-controller="ListController as listCtrl">
         <div class="form-inline">
-            <div class="form-group">
-                <div class="col-md-8">
-                    <input class="form-control" ng-model="text" placeholder = "Название" />
+                <div class="" ng-hide="maxPageCounter == undefined">
+                    <input class="form-control" ng-model="searchText" placeholder = "search text" />
+                    Search field
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-6">
-                    <input type="number" class="form-control" ng-model="price" placeholder="Цена" />
+                <div ng-show="maxPageCounter == undefined">
+                <h2>Chose item list</h2>
+                <button ng-click="goForData('json/large.json')" class="btn btn-def">large</button>
+                <button ng-click="goForData('json/small.json')" class="btn btn-def">small</button>
+                <button ng-click="goForData('json/custom.json')" class="btn btn-def">custom</button>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-8">
-                    <button class="btn btn-default" ng-click="addItem(text, price)">Добавить</button>
-                </div>
-            </div>
+
         </div>
-        <table class="table table-striped">
+
+        <table class="table table-striped" ng-hide="maxPageCounter == undefined">
             <thead>
                 <tr>
-                    <th>Предмет</th>
-                    <th>Цена</th>
-                    <th>Куплено</th>
-                    <th>Куплено</th>
+                    <th >
+                    <button ng-click="sortBy(0)" class="btn btn-def">{{listCtrl.header.id}}</button>
+                    <span class="sortorder " ng-show="propertyID == 0" ng-class="{reverse: reverse}">
+                    </th>
+                    <th >
+                    <button ng-click="sortBy(1)" class="btn btn-def">{{listCtrl.header.name}}</button>
+                    <span class="sortorder " ng-show="propertyID == 1" ng-class="{reverse: reverse}">
+                    </th>
+                    <th >
+                    <button ng-click="sortBy(2)" class="btn btn-def">{{listCtrl.header.price}}</button>
+                    <span class="sortorder " ng-show="propertyID == 2" ng-class="{reverse: reverse}">
+                    </th>
+                    <th >
+                    <button ng-click="sortBy('3')" class="btn btn-def">{{listCtrl.header.quantity}}</button>
+                    <span  class="sortorder " ng-show="propertyID == 3" ng-class="{reverse: reverse}">
+                    </th>
                 </tr>
             </thead>
+            <tfoot ng-hide="maxPageCounter <= 1">
+            <tr> 
+            <td><button class="btn btn-def" ng-click="pageCounter = pageCounter - 1" ng-hide="pageCounter === 1" ng-init="pageCounter=1">Prev</button></td>
+            <td>{{pageCounter}} </td>
+            <td ><button class="btn btn-def" ng-click="pageCounter = pageCounter + 1" ng-hide="pageCounter === maxPageCounter">Next</button></td>
+            </tr>
+            </tfoot>
             <tbody>
-                <tr ng-repeat="item in list.items">
-                    <td>{{item.purchase}}</td>
-                    <td>{{item.price}}</td>
-                    <td>{{item.done}}</td>
-                    <td>{{item.key}}</td>
+                <tr ng-repeat="product in listCtrl.product| limitTo: 50 : (50*(pageCounter-1)) | filter:searchText | orderBy : [propertyID] : reverse" >
+                    <td>{{product[0]}}</td>
+                    <td>{{product[1]}}</td>
+                    <td>{{product[2] | currency:$:0}} </td>
+                    <td>{{product[3] }}</td>
                 </tr>
             </tbody>
         </table>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
-<script>
-var model = {
-    items: [
-        { purchase: "Хлеб", done: false, price: 15.9, key: 3 },
-        { purchase: "Масло", done: false, price: 60 },
-        { purchase: "Картофель", done: true, price: 22.6 },
-        { purchase: "Сыр", done: false, price:310 }
-    ]
-};
-var purchaseApp = angular.module("purchaseApp", []);
-    purchaseApp.controller("purchaseController", function ($scope) {
-    $scope.list = model;
-    $scope.addItem = function (text, price) {
-        price = parseFloat(price); // преобразуем введенное значение к числу
-        if(text != "" && !isNaN(price)) // если текст установлен и введено число, то добавляем
-        {
-            $scope.list.items.push({ purchase: text, price: price, done: false });
-        }
-    }
-});
+
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script> 
+
+(function() {
+var listApp = angular.module("listApp",[]);
+    listApp.controller("ListController", ['$http','$scope', function($http, $scope){
+        var list = this;
+        list.product = [];
+        list.header = [];
+        $scope.Math = window.Math;
+
+        $scope.sortBy = function (propertyID) {
+            $scope.reverse = ($scope.propertyID == propertyID) ? !$scope.reverse : false;
+            $scope.propertyID = propertyID;
+        };
+       
+        $scope.goForData = function (dataUrl) {
+            $http.get(dataUrl).success(function(data){
+                list.header = data.shift();
+                list.product = data;
+                $scope.maxPageCounter = Math.ceil(list.product.length / 50);
+                });
+                };
+
+        $scope.createNewTable = function() {
+            $scope.getElementById.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+        };
+    }]);
+
+
+
+})();
 </script>
 </body>
-
 </html>
