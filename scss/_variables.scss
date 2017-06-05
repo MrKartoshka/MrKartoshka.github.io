@@ -5,11 +5,11 @@ $font-felt: 'Felt Tip Woman';
 $font-nexa-l: 'Nexa Light', 'Open Sans', sans-serif;
 $font-nexa-b: 'Nexa Bold', 'Open Sans', sans-serif;
 $font-open-sans: 'Open Sans', sans-serif;
-$home-bg: '../img/home-background.jpg';
-$portfolio-bg: '../img/portfolio-background.jpg';
+$home-bg: '../img/text.jpg';
+$portfolio-bg: '../img/text.jpg';
 
 @mixin background-img($img-url) {
 	background-image: url($img-url);
-	background-size: cover;
+	background-size: contain;
 	background-position: center center;
 }

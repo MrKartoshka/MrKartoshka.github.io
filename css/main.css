@@ -84,8 +84,8 @@ section {
     fill: #bebebe; }
 
 [id="home"] {
-  background-image: url("../img/home-background.jpg");
-  background-size: cover;
+  background-image: url("../img/text.jpg");
+  background-size: contain;
   background-position: center center; }
 
 .content--home {
@@ -144,8 +144,8 @@ section {
   font-family: "Felt Tip Woman"; }
 
 [id='portfolio'] {
-  background-image: url("../img/portfolio-background.jpg");
-  background-size: cover;
+  background-image: url("../img/text.jpg");
+  background-size: contain;
   background-position: center center; }
 
 .portfolio-conten__text {
