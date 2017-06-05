@@ -13,7 +13,7 @@ gulp.task('sass', function () {
        .pipe(sass().on('error', sass.logError))
        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
        .pipe(sourcemaps.write('.'))
-       .pipe(gulp.dest('_build/assets/css'))
+       .pipe(gulp.dest('css'))
        .pipe(browser.stream({match: '**/*.css'}));
 
 });
