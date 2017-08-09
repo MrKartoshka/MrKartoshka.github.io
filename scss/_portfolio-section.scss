@@ -1,5 +1,22 @@
 [id='portfolio'] {
 	@include background-img($portfolio-bg);
+	
+
+	.jump-block {
+
+		p {
+		color: #bebebe;
+	}
+	.chevron-down {
+		fill: #bebebe;
+	}
+	}	
+}
+
+.portfolio-content {
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 .portfolio-conten__text {
 	font-size: 3em;
@@ -9,16 +26,52 @@
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
+
 }
 .portfolio-content__photo {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	margin: 0 100px;
+	justify-content: center;
+	margin: 0 ;
 }
 .photos {
-	max-height: 16vw;
-	max-width: 16vw;
-	margin: 0;
-	padding: 25px;
+	max-height: 20vw;
+	max-width: 30.5vw;
+}
+
+.photos:nth-child(3n+1) {margin: 2vh 2vw;}
+.photos:nth-child(3n+2) {margin: 2vh 0;}
+.photos:nth-child(3n+3) {margin: 2vh 2vw;}
+
+#zoomer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 90vh;
+	width: 90vw;
+	background-color: rgba(0,0,0,0.5);
+	background-position: center center;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: 1px solid #000;
+	display: none;
+
+
+	.cross {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(50%, -50%);
+		width: 30px;
+		height: 30px;
+		background-image: url("../img/close.png");
+		background-position: center center;
+		background-color: white;
+		background-repeat: no-repeat;
+		background-size: contain;
+		border-radius: 100%;
+		border: 1px solid #000;
+	}
 }

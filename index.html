@@ -31,7 +31,7 @@
 		<div class="content content--home">
 			<div class="home-logo"><img src="img/logo1.png" alt="main logo"></div>
 			<h1>
-				<strong>JWOOD</strong>PHOTOGRAPHY
+				Універсальна добра річ, яка допомагає людям чинити хороші справи.
 			</h1>
 		</div>
 		<div class="jump-block">
@@ -57,20 +57,21 @@
 				<div class="about-me__photo">
 				</div>
 			<div class="about-me__text">
-				<h2>
-					About Me
-				</h2>
+
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					Добра кофта ― це універсальна добра річ, яка допомагає людям чинити хороші справи.
 				</p>
 				<p>
-					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Добру кофту можна купити. Всі кошти від продажу підуть у благодійний фонд «Клуб Добродіїв». <br>
+Можна придумати добру справу (зовсім необов’язково велику і складну) і втілити її в життя у добрій кофті. <br>
+Добру кофту можна подарувати добрій людині, якщо хочете віддячити за все хороше, що вона зробила для світу.<br>
+Можна подарувати кепській людині, якщо хочете спонукати її стати добрішою.<br>
+Добру кофту можна просто носити і таким чином розповсюджувати ідею добра всюди, де б ви не з’являлися.<br>
+Можна навіть не купувати добру кофту, а просто сфотографувати і написати пост, щоб про неї дізналося якомога більше добрих людей.<br>
+Якщо виконаєте хоч один пункт із переліку, добра стане більше, а це і є наша мета ― добро повсюди.
 				</p>
-				<h3 class="about-me__sign">
-					<img src="img/logo-eb.jpg" alt="LOGO_EB">
-				</h3>
 				<p>
-					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Дякуємо!
 				</p>
 			</div>
 		</div>
@@ -98,20 +99,17 @@
 			<a href="#contact" class="nav__item">Замовити</a>
 		</div>
 		<div class="content portfolio-content">
-			<h2 class="portfolio-conten__text">
-				Portfolio
-			</h2>
+		<div id="zoomer">
+			<div class="cross" onclick="closeImg()"></div>
+		</div>
 			<div class="portfolio-content__photo">
-				<img src="img\logo1.jpg" alt="photo1" class="photos">
-				<img src="img\logo2.jpg" alt="photo2" class="photos">
-				<img src="img\logo3.jpg" alt="photo3" class="photos">
-				<img src="img\text.jpg" alt="photo4" class="photos">
-				<img src="img\pes1.jpg" alt="photo5" class="photos">
-				<img src="img\pes2.jpg" alt="photo6" class="photos">
-				<img src="img\pes3.jpg" alt="photo7" class="photos">
-				<img src="img\logo mini.jpg" alt="photo8" class="photos">
-				<img src="img\tshirt2.jpg" alt="photo9" class="photos">
-				<img src="img\tshirt1.jpg" alt="photo10" class="photos">
+				<img src="img\gal1.jpg" alt="photo1" class="photos" onclick="openImg('gal1.jpg')">
+				<img src="img\gal2.jpg" alt="photo2" class="photos" onclick="openImg('gal2.jpg')">
+				<img src="img\gal3.jpg" alt="photo3" class="photos" onclick="openImg('gal3.jpg')">
+				<img src="img\gal4.jpg" alt="photo4" class="photos" onclick="openImg('gal4.jpg')">
+				<img src="img\gal5.jpg" alt="photo5" class="photos" onclick="openImg('gal5.jpg')">
+				<img src="img\gal6.jpg" alt="photo6" class="photos" onclick="openImg('gal6.jpg')">
+
 			</div>
 		</div>
 		<div class="jump-block">
@@ -136,7 +134,7 @@
 		<div class="content content-contact">
 			<p>Вартість: 500грн </p>
 			<p>Тисни кнопку "хочу", щоб зробити замовлення</p>
-			<button class="google-form">Хочу добру кофту</button>
+			<button class="google-form" onclick="window.open('https://goo.gl/forms/UG0MHgiIbcKd6wSi1')">Хочу добру кофту</button>
 			<p>social media: </p>
 			<div class="contact--social">
 				<svg class="social-media-icon">
@@ -155,6 +153,22 @@
 			<p> by Maksym Dudnik </p>
 			<img src="img/logo_kd.png" alt="LOGO_EB">
 		</div>
+
+		
 	</section>
+<script type="text/javascript">
+function openImg(url)
+{
+    let zoomer = document.getElementById('zoomer');
+    zoomer.style.backgroundImage = "url(" + "img/" + url + ")";
+    zoomer.style.display = "block";
+}
+function closeImg()
+{
+    let zoomer = document.getElementById('zoomer');
+    zoomer.style.display = "none";
+
+}
+</script>
 </body>
 </html>

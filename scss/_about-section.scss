@@ -8,7 +8,7 @@
 
 .about-me__photo {
 	width: 50%;
-	background-image: url("../img/tshirt1.jpg");
+	background-image: url("../img/tshirt1.png");
 	background-size: contain;
 	background-position: top right;
 	background-repeat: no-repeat;
@@ -38,4 +38,10 @@
 .about-me__sign {
 	font-size: 2.25em;
 	font-family: $font-felt;
+}
+
+#about-me {
+	.chevron-down {
+		fill: #bebebe;
+	}
 }
