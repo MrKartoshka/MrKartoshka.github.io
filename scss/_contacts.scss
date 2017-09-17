@@ -1,0 +1,149 @@
+
+.s-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #6dd0f7;
+  display: none;
+
+  .contacts-menu {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+
+    a {
+      font-family: Super_Plumber_Brothers;
+      color: white;
+      text-transform: uppercase;
+      font-size: 40px;
+      text-shadow: 0px 0px 2px black;
+      width: 32vw;
+      text-align: center;
+    }
+  }
+
+  .contacts-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+    .prof-skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      display: none;
+    }
+
+    .skill-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      .skill-name {
+        width: 100%;
+        font-family: Super_Plumber_Brothers;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        text-shadow: 0px 0px 2px black;
+      }
+      .skill-desc {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: Super_Plumber_Brothers;
+        font-size: 20px;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px black;
+      }
+    }
+
+    .pers-skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      display: none;
+
+      .pers-skill_item {
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        .mushroom {
+          background-image: url(../img/powerUp.png);
+          height: 70px;
+          width: 70px;
+          -webkit-background-size: contain;
+          background-size: contain;
+        }
+        .skill-desc {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          font-family: Super_Plumber_Brothers;
+          font-size: 30px;
+          color: #ffffff;
+          text-shadow: 0px 0px 2px black;
+        }
+      }
+    }
+
+    .work-exp {
+      display: flex;
+      justify-content: space-around;
+      align-content: stretch;
+      flex-wrap: nowrap;
+      width: 100%;
+      display: none;
+
+      .career_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .work_title {
+          font-family: Super_Plumber_Brothers;
+          font-size: 40px;
+          color: #ffffff;
+          text-shadow: 0px 0px 2px black;
+          text-align: center;
+        }
+
+        .work_duration {
+          font-family: Super_Plumber_Brothers;
+          font-size: 30px;
+          color: #ffffff;
+          text-shadow: 0px 0px 2px black;
+          text-align: center;
+          margin: 10px 0;
+        }
+
+        .castle {
+          background-image: url(../img/career_castle.png);
+          max-height: 30vh;
+          flex-grow: 1;
+          -webkit-background-size: contain;
+          background-size: contain;
+          background-position: bottom center;
+          background-repeat: no-repeat;
+
+        }
+      }
+    }
+  }
+
+
+  .contacts-bottom {
+    height: 5vh;
+    background-image: url(../img/contacts_ground.png);
+    -webkit-background-size: 5vh;
+    background-repeat: repeat-x;
+    background-size: 5vh;
+    transform: translateY(-10px);
+  }
+
+}

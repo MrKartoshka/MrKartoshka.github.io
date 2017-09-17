@@ -1,306 +1,337 @@
-@font-face {
-  font-family: 'Felt Tip Woman';
-  src: url("../fonts/Felt Tip Woman.woff") fromat("woff"); }
-
-@font-face {
-  font-family: 'Nexa Bold';
-  src: url("../fonts/Nexa Bold.woff") fromat("woff"); }
-
-@font-face {
-  font-family: 'Nexa Light';
-  src: url("../fonts/Nexa Light.woff") fromat("woff"); }
-
-* {
-  box-sizing: border-box; }
-
 body {
-  margin: 0;
-  overflow-x: hidden; }
+  margin: 0; }
 
 section {
-  height: 100vh;
   width: 100vw;
+  height: 100vh; }
+
+.star {
+  background-image: url(../img/star.png);
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  margin-left: 5px; }
+
+.s-info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  background-color: #000;
+  display: none; }
+  .s-info .info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .s-info .info .info_item {
+      margin-bottom: 20px; }
+      .s-info .info .info_item p {
+        text-transform: uppercase;
+        font-family: Super_Plumber_Brothers;
+        font-size: 30px;
+        color: #ffffff;
+        text-align: center;
+        margin: 0; }
+  .s-info .info_ground {
+    text-transform: uppercase;
+    font-family: Super_Plumber_Brothers;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    height: 10vh;
+    background-image: url(../img/info_ground.png);
+    background-size: 5vh; }
+
+@font-face {
+  font-family: Super_Plumber_Brothers;
+  src: url(../fonts/Super_Plumber_Brothers.ttf); }
+
+.s-welcome {
+  background-color: #6dd0f7;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between; }
-
-.nav {
-  min-height: 75px;
-  margin: 0 70px;
-  border-bottom: 1px solid #f1f1f1;
-  color: #f1f1f1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
-  .nav--grey {
-    border-color: #bebebe;
-    color: #bebebe; }
-  .nav a:last-of-type {
-    color: #ff0000; }
-
-.nav__item {
-  margin: 0px 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: "Nexa Light", "Open Sans", sans-serif;
-  color: inherit; }
-
-.content {
-  -ms-flex-positive: 8;
-      flex-grow: 8;
-  margin: 0; }
-
-.jump-block {
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  color: #f1f1f1;
-  font-size: 16px;
-  font-family: "Nexa Bold", "Open Sans", sans-serif;
-  text-transform: uppercase;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-align: center;
-      align-items: center; }
-  .jump-block--grey {
-    border-color: #bebebe;
-    color: #bebebe; }
-
-.chevron-down {
-  fill: #f1f1f1;
-  height: 30px;
-  margin-bottom: 20px; }
-  .chevron-down--grey {
-    fill: #bebebe; }
-
-[id="home"] {
-  background-image: url("../img/main_logo.jpg");
-  background-size: contain;
-  background-position: center center; }
-
-.content--home {
-  text-align: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -ms-flex-align: end;
-      align-items: flex-end;
-  padding-right: 10vw; }
-  .content--home h1 {
-    font-size: 2.5em;
-    font-family: "Nexa Light", "Open Sans", sans-serif;
-    font-weight: 100;
-    color: #f1f1f1;
-    margin: 55px;
-    max-width: 40vh; }
-
-.home-logo {
-  padding-top: 14vh;
-  margin-bottom: 0;
-  height: 54vh;
-  width: auto; }
-  .home-logo img {
-    max-height: 100%;
-    max-width: 100%; }
-
-.content--about {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 80px; }
-
-.about-me__photo {
-  width: 50%;
-  background-image: url("../img/tshirt1.png");
-  background-size: contain;
-  background-position: top right;
-  background-repeat: no-repeat; }
-
-.about-me__text {
-  margin-left: 30px;
-  margin-right: 50px;
-  width: 50%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  color: #202020;
-  line-height: 200%; }
-  .about-me__text h2 {
-    font-size: 3.5em;
-    font-family: "Nexa Light", "Open Sans", sans-serif;
-    text-transform: uppercase;
-    font-weight: lighter; }
-  .about-me__text p {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.25em; }
-
-.about-me__sign {
-  font-size: 2.25em;
-  font-family: "Felt Tip Woman"; }
-
-#about-me .chevron-down {
-  fill: #bebebe; }
-
-[id='portfolio'] {
-  background-image: url("../img/text.jpg");
-  background-size: contain;
-  background-position: center center; }
-  [id='portfolio'] .jump-block p {
-    color: #bebebe; }
-  [id='portfolio'] .jump-block .chevron-down {
-    fill: #bebebe; }
-
-.portfolio-content {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  position: relative; }
-
-.portfolio-conten__text {
-  font-size: 3em;
-  font-family: "Nexa Light", "Open Sans", sans-serif;
-  font-weight: lighter;
-  color: #f1f1f1;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.15em; }
-
-.portfolio-content__photo {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  margin: 0; }
-
-.photos {
-  max-height: 20vw;
-  max-width: 30.5vw; }
-
-.photos:nth-child(3n+1) {
-  margin: 2vh 2vw; }
-
-.photos:nth-child(3n+2) {
-  margin: 2vh 0; }
-
-.photos:nth-child(3n+3) {
-  margin: 2vh 2vw; }
-
-#zoomer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 90vh;
-  width: 90vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-position: center center;
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: 1px solid #000;
-  display: none; }
-  #zoomer .cross {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-    width: 30px;
-    height: 30px;
-    background-image: url("../img/close.png");
-    background-position: center center;
-    background-color: white;
-    background-repeat: no-repeat;
+  .s-welcome .welcome-headline-bg {
+    width: 100vw;
+    background-image: url(../img/welcome_background.png);
     background-size: contain;
-    border-radius: 100%;
-    border: 1px solid #000; }
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .s-welcome .welcome-headline-bg .welcome-headline {
+      background-image: url(../img/welcome-plate.jpg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      font-family: Super_Plumber_Brothers;
+      color: white;
+      padding: 5vh 5vw;
+      margin: 7vh auto 3vh; }
+      .s-welcome .welcome-headline-bg .welcome-headline p {
+        margin: 0;
+        text-shadow: 0px 0px 2px black; }
+      .s-welcome .welcome-headline-bg .welcome-headline p:first-of-type {
+        font-size: 50px;
+        line-height: 54px; }
+      .s-welcome .welcome-headline-bg .welcome-headline p:last-of-type {
+        font-size: 60px;
+        line-height: 62px; }
+  .s-welcome .welcome-menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .s-welcome .welcome-menu a {
+      margin: 10px;
+      font-family: Super_Plumber_Brothers;
+      font-size: 56px;
+      line-height: 66px;
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0px 0px 2px black; }
+  .s-welcome .welcome-bottom {
+    background-image: url(../img/welcome_ground.png);
+    background-size: 5vh;
+    height: 10vh;
+    position: relative; }
+    .s-welcome .welcome-bottom .mario {
+      position: absolute;
+      bottom: 100%;
+      left: 30px;
+      z-index: 4; }
+    .s-welcome .welcome-bottom .pipe {
+      background-image: url(../img/welcome-pipe.png);
+      background-size: 100%;
+      position: absolute;
+      background-repeat: no-repeat;
+      bottom: 100%;
+      height: 30px;
+      z-index: 5; }
+      .s-welcome .welcome-bottom .pipe:first-child {
+        left: -10px;
+        right: calc(100vw - 40px);
+        transform: rotate(90deg); }
+      .s-welcome .welcome-bottom .pipe:last-child {
+        right: -10px;
+        left: calc(100vw - 40px);
+        transform: rotate(-90deg); }
 
-.content-contact {
+.s-contacts {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  color: #202020; }
-  .content-contact p {
-    font-family: "Nexa Bold", "Open Sans", sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    margin: 20px; }
-  .content-contact p:nth-of-type(1) {
-    font-family: "Nexa Light", "Open Sans", sans-serif;
-    font-size: 4em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit; }
-  .content-contact .google-form {
-    background-color: #ff0000;
-    border: 0;
-    padding: 20px;
-    color: white;
-    font-size: 3em;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    padding: 10px 50px;
-    font-family: "Nexa Light", "Open Sans", sans-serif; }
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  background-color: #6dd0f7;
+  display: none; }
+  .s-contacts .contacts-menu {
+    padding-top: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%; }
+    .s-contacts .contacts-menu a {
+      font-family: Super_Plumber_Brothers;
+      color: white;
+      text-transform: uppercase;
+      font-size: 40px;
+      text-shadow: 0px 0px 2px black;
+      width: 32vw;
+      text-align: center; }
+  .s-contacts .contacts-info {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    .s-contacts .contacts-info .prof-skills {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-align: center;
+          align-items: center;
+      display: none; }
+    .s-contacts .contacts-info .skill-item {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-line-pack: start;
+          align-content: flex-start; }
+      .s-contacts .contacts-info .skill-item .skill-name {
+        width: 100%;
+        font-family: Super_Plumber_Brothers;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        text-shadow: 0px 0px 2px black; }
+      .s-contacts .contacts-info .skill-item .skill-desc {
+        width: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+            justify-content: center;
+        font-family: Super_Plumber_Brothers;
+        font-size: 20px;
+        color: #ffffff;
+        text-shadow: 0px 0px 2px black; }
+    .s-contacts .contacts-info .pers-skills {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-align: center;
+          align-items: center;
+      display: none; }
+      .s-contacts .contacts-info .pers-skills .pers-skill_item {
+        margin: 0 20px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: center;
+            align-items: center;
+        width: 40%; }
+        .s-contacts .contacts-info .pers-skills .pers-skill_item .mushroom {
+          background-image: url(../img/powerUp.png);
+          height: 70px;
+          width: 70px;
+          background-size: contain; }
+        .s-contacts .contacts-info .pers-skills .pers-skill_item .skill-desc {
+          width: 100%;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: center;
+              justify-content: center;
+          font-family: Super_Plumber_Brothers;
+          font-size: 30px;
+          color: #ffffff;
+          text-shadow: 0px 0px 2px black; }
+    .s-contacts .contacts-info .work-exp {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      width: 100%;
+      display: none; }
+      .s-contacts .contacts-info .work-exp .career_item {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+        .s-contacts .contacts-info .work-exp .career_item .work_title {
+          font-family: Super_Plumber_Brothers;
+          font-size: 40px;
+          color: #ffffff;
+          text-shadow: 0px 0px 2px black;
+          text-align: center; }
+        .s-contacts .contacts-info .work-exp .career_item .work_duration {
+          font-family: Super_Plumber_Brothers;
+          font-size: 30px;
+          color: #ffffff;
+          text-shadow: 0px 0px 2px black;
+          text-align: center;
+          margin: 10px 0; }
+        .s-contacts .contacts-info .work-exp .career_item .castle {
+          background-image: url(../img/career_castle.png);
+          max-height: 30vh;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+          background-size: contain;
+          background-position: bottom center;
+          background-repeat: no-repeat; }
+  .s-contacts .contacts-bottom {
+    height: 5vh;
+    background-image: url(../img/contacts_ground.png);
+    -webkit-background-size: 5vh;
+    background-repeat: repeat-x;
+    background-size: 5vh;
+    transform: translateY(-10px); }
 
-.contact--social {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center; }
+.mario {
+  height: 17px;
+  width: 17px;
+  background: url("../img/smb_mario_sheet.gif") 0 5px;
+  transform: translateY(-50%) scale(2);
+  animation: animate-mario 0.5s 0s steps(4) infinite, move-mario ease-in 5s 0s infinite;
+  position: absolute;
+  left: 100px;
+  background-repeat: repeat-x; }
 
-.social-media-icon {
-  fill: #202020;
-  padding: 5px;
-  width: 50px;
-  height: 50px;
-  margin: 0 20px;
-  border: 2px solid #202020;
-  border-radius: 25px; }
+@keyframes animate-mario {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -72px 0; } }
 
-.footer {
-  color: #bebebe;
-  font-size: 16px;
-  font-family: "Nexa Light", "Open Sans", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  border-top: 1px solid #bebebe;
-  margin: 0 70px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-pack: center;
-      justify-content: center; }
-  .footer p {
-    vertical-align: bottom;
-    margin: 40px; }
-  .footer img {
-    height: 56px; }
+@keyframes move-mario {
+  0% {
+    left: 30px; }
+  100% {
+    left: calc(100vw - 30px); } }
+
+.bounce {
+  animation-name: bounce;
+  animation-duration: 3.3s;
+  animation-iteration-count: infinite; }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-30px); }
+  60% {
+    transform: translateY(-15px); } }
+
+.animDel-1 {
+  animation-delay: 1s; }
+
+.animDel-2 {
+  animation-delay: 2s; }
+
+.animDel-3 {
+  animation-delay: 3s; }
+
+.animDel-4 {
+  animation-delay: 4s; }
+
+.animDel-5 {
+  animation-delay: 5s; }
+
+.animDel-6 {
+  animation-delay: 6s; }
 
 /*# sourceMappingURL=main.css.map */

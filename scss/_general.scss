@@ -1,81 +1,57 @@
-* {
-	box-sizing: border-box;
-}
-
 body {
-	margin: 0;
-	overflow-x: hidden;
+  margin: 0;
 }
+
 section {
-	height: 100vh;
-	width:  100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
 }
 
-.nav {
-	min-height: 75px;
-	margin: 0 70px;
-	border-bottom: 1px solid $main-font-color;
-	color: $main-font-color;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	&--grey {
-		border-color: $second-font-color;
-		color: $second-font-color;
-	}
-
-	a:last-of-type {
-		color: #ff0000;
-	}
-}
-
-
-
-.nav__item {
-	margin: 0px 20px;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 18px;
-	font-family: $font-nexa-l;
-	color: inherit;
+.star {
+  background-image: url(../img/star.png);
+  height: 50px;
+  width: 50px;
+  -webkit-background-size: contain;
+  background-size: contain;
+  margin-left: 5px;
 }
 
 
 
 
+.s-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #000;
+  display: none;
 
-.content {
-	flex-grow: 8;
-	margin: 0;
-}
-
-.jump-block {
-	flex-grow: 1;
-	color: $main-font-color;
-	font-size: 16px;
-	font-family: $font-nexa-b;
-	text-transform: uppercase;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
-
-&--grey {
-		border-color: $second-font-color;
-		color: $second-font-color;
-	}
-	}
-
-.chevron-down {
-	fill: $main-font-color;
-	height: 30px;
-	margin-bottom: 20px;
-	
-	&--grey {
-	fill: $second-font-color;
-	}
+  .info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    .info_item {
+      margin-bottom: 20px;
+      p {
+        text-transform: uppercase;
+        font-family: Super_Plumber_Brothers;
+        font-size: 30px;
+        color: #ffffff;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+  .info_ground {
+    text-transform: uppercase;
+    font-family: Super_Plumber_Brothers;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    height: 10vh;
+    background-image: url(../img/info_ground.png);
+    -webkit-background-size: 5vh;
+    background-size: 5vh;
+  }
 }
