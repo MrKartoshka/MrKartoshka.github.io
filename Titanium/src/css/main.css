@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #443266;
+    width: 100vw;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.welcome-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 50px;
+}
+
+.welcome-block p {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.welcome-block input {
+    width: 60%;
+    height: 3em;
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+.result-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.result-block .result-item {
+    margin: 0 20px;
+    width: 100vw;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-block .result-desc p{
+    color: #443266;
+}
+.result-block .result-item p{
+    font-size: 1.5em;
+}
+
+.result-block .result-item:nth-child(odd) {
+    background: #C3C3E5;
+    color: #443266;
+}
+
+.result-block .result-item:nth-child(even) {
+    background: #8C489F;
+    color: #F1F0FF;
+}
+
+.url-path {
+    flex-grow: 1;
+    margin-left: 30px;
+    display: flex;
+}
+
+.host-text {
+    color: #6085ff;
+}
+
+.dom-text {
+    color: #ff5461;
+    padding-left: 5px;
+}
+
+.path-text {
+    color: yellow;
+    padding-left: 5px;
+}
