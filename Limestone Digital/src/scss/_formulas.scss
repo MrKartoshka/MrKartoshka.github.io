@@ -1,0 +1,200 @@
+.s-formulas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 77px;
+
+  .formulas-item {
+    margin: 0;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .formulas-item_image {
+      width: 50%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    .formulas-item_content {
+      width: 50%;
+      padding-left: 6%;
+
+      @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+        width: 100%;
+      }
+
+      .formulas-item_content-title {
+        margin-top: 0;
+        color: #54326a;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 1;
+        letter-spacing: 1px;
+        @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+          padding-top: 10px;
+          font-size: 15px;
+        }
+
+        @media (max-width: 1100px) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .formulas-item:nth-child(1) {
+    background-image: url("img/formula_list-bg-min.png");
+    background-size: contain;
+    background-position-y: center;
+    background-position-x: 108%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+      background-position-x: 50px;
+    }
+    ul {
+      list-style-image: url('img/formulas_bullet-min.png');
+      max-width: 550px;
+
+      li {
+        font-weight: 300;
+        font-size: 22px;
+        color: #4e4e4e;
+        margin-bottom: 28px;
+        line-height: 1;
+
+        @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+          font-size: 11px;
+        }
+
+        @media (max-width: 970px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .formulas-item:nth-child(2) {
+    .formulas-item_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      padding-right: 5%;
+      width: 40%;
+      margin-top: 0;
+
+
+
+      @media (max-width: 1100px) {
+        width: 50%;
+      }
+
+      @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+        width: 100%;
+      }
+
+      p {
+        text-align: center;
+      }
+      p:nth-child(2) {
+        margin-top: -15px;
+        margin-bottom: 0;
+        font-weight: 300;
+        color: #4e4e4e;
+        font-size: 24px;
+        letter-spacing: -0.8px;
+        line-height: 1.4;
+
+        @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        button {
+          width: auto;
+        }
+      }
+
+      @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+        button  {
+          width: 80%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .formulas-item:nth-child(3) {
+    .formulas-item_content {
+
+      p:first-child {
+        margin-top: 27px;
+        margin-bottom: 32px;
+        padding-left: 2px;
+      }
+      p:nth-child(n+2) {
+        padding-left: 5px;
+        font-weight: 300;
+        color: #4e4e4e;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 6px;
+        letter-spacing: 1.1px;
+        line-height: 1.35;
+
+        @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        span {
+          font-weight: 800;
+          margin-right: 10px;
+
+          @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .formulas-item:nth-child(1) {
+    .formulas-item_image {
+      background-image: url('img/formula_img_1-min.jpg');
+    }
+  }
+  .formulas-item:nth-child(2) {
+    .formulas-item_image {
+      background-image: url('img/formula_img_2-min.jpg');
+    }
+  }
+  .formulas-item:nth-child(3) {
+    .formulas-item_image {
+      background-image: url('img/formula_img_3-min.jpg');
+    }
+  }
+
+  .formulas-item:nth-child(even) {
+    flex-direction: row-reverse;
+    @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+      flex-direction: column;
+    }
+  }
+}

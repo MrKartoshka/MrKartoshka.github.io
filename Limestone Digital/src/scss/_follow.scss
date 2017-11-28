@@ -1,0 +1,73 @@
+.s-follow {
+  width: 100%;
+  
+  
+  .follow_title {
+    font-weight: 800;
+    color: #54326a;
+    font-size: 44px;
+    text-align: center;
+    margin-top: 57px;
+    margin-bottom: 35px;
+
+    @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 30px;
+      width: 80%;
+      margin: 20px auto;
+    }
+    
+    span {
+      display: inline-block;
+      background-image: url('img/insta_logo-min.png');
+      background-position: bottom center;
+      margin-bottom: -10px;
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      height: 1.2em;
+      width: 1.2em;
+    }
+  }
+  
+  .follow_images {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 33vw;
+    
+    .img-container {
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+      width: 17%;
+      height: 50%;
+      margin: 0;
+      border: 1px solid #ffffff;
+    }
+
+    .img-container:nth-child(3n+1) {
+      width: 33%;
+      height: 100%;
+    }
+    
+    .img-container:nth-child(1) {
+      background-image: url('img/follow_img_6-min.jpg');
+    }
+    .img-container:nth-child(2) {
+      background-image: url('img/follow_img_5-min.jpg');
+    }
+    .img-container:nth-child(3) {
+      background-image: url('img/follow_img_4-min.jpg');
+    }
+    .img-container:nth-child(4) {
+      background-image: url('img/follow_img_3-min.jpg');
+    }
+    .img-container:nth-child(5) {
+      background-image: url('img/follow_img_2-min.jpg');
+    }
+    .img-container:nth-child(6) {
+      background-image: url('img/follow_img_1-min.jpg');
+    }
+  }
+}

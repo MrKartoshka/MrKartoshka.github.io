@@ -1,0 +1,56 @@
+.s-comments {
+  background-image: url('img/fb_comments_bg-min.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 41px 30.5% 45px 29%;
+
+  @media (max-width: 1300px) {
+    padding: 41px 20.5% 45px 19%;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 41px 20.5% 45px 19%;
+  }
+
+  @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+    padding: 21px 10% 25px 10%;
+  }
+
+  .comments_title {
+    color: #54326a;
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 0;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+
+    @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 25px;
+    }
+  }
+
+  .comments_block {
+    width: 100%;
+    height: 590px;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .comments_button {
+    width: 395px;
+    height: 75px;
+    position: relative;
+    left: 12px;
+    font-size: 26px;
+    letter-spacing: -1.5px;
+
+    @media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+}

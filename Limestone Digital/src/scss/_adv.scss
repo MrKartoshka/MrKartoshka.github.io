@@ -1,0 +1,133 @@
+.s-adv_block {
+  width: 100%;
+  height: 590px;
+  background-image: url('img/adv_placeholder-min.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 80% center;
+  display: flex;
+  align-items: center;
+
+  .adv_container {
+    margin-left: 6.1%;
+    width: 620px;
+    color: #54326a;
+    margin-top: -55px;
+
+    .adv_header {
+      margin: 0;
+      font-weight: 800;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 50px;
+    }
+
+    .adv_info {
+      display: flex;
+      padding-top: 25px;
+
+      .adv_info_block {
+        width: 50%;
+
+        .info_title {
+          font-weight: 800;
+          font-size: 25px;
+          padding-left: 15px;
+          margin: 0;
+        }
+        ul {
+          margin: 0;
+          padding-left: 20px;
+        }
+        ul.dashed {
+          list-style-type: none;
+        }
+        ul.dashed > li {
+          text-indent: -5px;
+        }
+        ul.dashed > li:before {
+          content: "-";
+          font-size: 1em;
+          line-height: 1em;
+          text-indent: -5px;
+        }
+
+        .info_list-item {
+          font-weight: 300;
+          font-size: 21px;
+          line-height: 1.1;
+        }
+
+        .list-item_tips {
+          color: #000000;
+          font-weight: 300;
+          font-size: 11px;
+          padding-left: 11px;
+          margin-top: 0;
+          letter-spacing: 0.9px;
+          padding-top: 10px;
+        }
+      }
+    }
+
+    .adv_button {
+      background-color: #00c8b6;
+      color: #ffffff;
+
+      &:hover {
+        background-color: transparent;
+        color: #00c8b6;
+      }
+
+      &:active {
+        background-color: transparent;
+        color: #00c8b6;
+
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) and (-webkit-min-device-pixel-ratio: 2) {
+  .s-adv_block {
+    height: 270px;
+    padding-top: 20px;
+    align-items: flex-start;
+    margin: 0;
+
+    .adv_container {
+      margin: 0;
+
+      .adv_header {
+        font-size: 18px;
+      }
+
+      .adv_info {
+        padding-top: 12px;
+
+        .adv_info_block {
+
+          .info_title {
+            font-size: 15px;
+            padding-left: 9px;
+          }
+
+          .info_list-item {
+            font-size: 12px;
+          }
+
+          .list-item_tips {
+            color: #000000;
+            font-weight: 300;
+            font-size: 7px;
+            position: relative;
+            left: -50%;
+            margin-top: 0;
+            letter-spacing: 0.9px;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
