@@ -13,23 +13,32 @@ section {
   margin-left: 5px; }
 
 .s-info {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #000;
   display: none; }
   .s-info .info {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-positive: 1;
-        flex-grow: 1;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .s-info .info .info_item {
       margin-bottom: 20px; }
       .s-info .info .info_item p {
@@ -49,26 +58,38 @@ section {
     background-image: url(../img/info_ground.png);
     background-size: 5vh; }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .s-info .info_ground:first-child {
+    height: 5vh; }
+  .s-info .info_ground:last-child {
+    padding-bottom: 10vh; } }
+
 @font-face {
   font-family: Super_Plumber_Brothers;
   src: url(../fonts/Super_Plumber_Brothers.ttf); }
 
 .s-welcome {
   background-color: #6dd0f7;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .s-welcome .welcome-headline-bg {
     width: 100vw;
     background-image: url(../img/welcome_background.png);
     background-size: contain;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .s-welcome .welcome-headline-bg .welcome-headline {
       background-image: url(../img/welcome-plate.jpg);
       background-size: 100% 100%;
@@ -88,16 +109,21 @@ section {
         font-size: 60px;
         line-height: 62px; }
   .s-welcome .welcome-menu {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-line-pack: center;
         align-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .s-welcome .welcome-menu a {
       margin: 10px;
       font-family: Super_Plumber_Brothers;
@@ -127,23 +153,34 @@ section {
       .s-welcome .welcome-bottom .pipe:first-child {
         left: -10px;
         right: calc(100vw - 40px);
-        transform: rotate(90deg); }
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); }
       .s-welcome .welcome-bottom .pipe:last-child {
         right: -10px;
         left: calc(100vw - 40px);
-        transform: rotate(-90deg); }
+        -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg); }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .s-welcome .welcome-bottom {
+    padding-bottom: 5vh; } }
 
 .s-contacts {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #6dd0f7;
   display: none; }
   .s-contacts .contacts-menu {
-    padding-top: 20px;
+    padding-top: 50px;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
@@ -152,31 +189,39 @@ section {
         flex-wrap: wrap;
     width: 100%; }
     .s-contacts .contacts-menu a {
+      padding-top: 20px;
       font-family: Super_Plumber_Brothers;
       color: white;
       text-transform: uppercase;
       font-size: 40px;
       text-shadow: 0px 0px 2px black;
-      width: 32vw;
+      width: 50vw;
       text-align: center; }
   .s-contacts .contacts-info {
-    -ms-flex-positive: 1;
-        flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .s-contacts .contacts-info .prof-skills {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      -ms-flex-align: center;
-          align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       display: none; }
     .s-contacts .contacts-info .skill-item {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -192,32 +237,41 @@ section {
         text-shadow: 0px 0px 2px black; }
       .s-contacts .contacts-info .skill-item .skill-desc {
         width: 100%;
+        display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         font-family: Super_Plumber_Brothers;
         font-size: 20px;
         color: #ffffff;
         text-shadow: 0px 0px 2px black; }
     .s-contacts .contacts-info .pers-skills {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      -ms-flex-align: center;
-          align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       display: none; }
       .s-contacts .contacts-info .pers-skills .pers-skill_item {
         margin: 0 20px;
+        display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-direction: column;
-            flex-direction: column;
-        -ms-flex-align: center;
-            align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width: 40%; }
         .s-contacts .contacts-info .pers-skills .pers-skill_item .mushroom {
           background-image: url(../img/powerUp.png);
@@ -226,15 +280,18 @@ section {
           background-size: contain; }
         .s-contacts .contacts-info .pers-skills .pers-skill_item .skill-desc {
           width: 100%;
+          display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          -ms-flex-pack: center;
-              justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
           font-family: Super_Plumber_Brothers;
           font-size: 30px;
           color: #ffffff;
           text-shadow: 0px 0px 2px black; }
     .s-contacts .contacts-info .work-exp {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: distribute;
@@ -246,12 +303,16 @@ section {
       width: 100%;
       display: none; }
       .s-contacts .contacts-info .work-exp .career_item {
+        display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-direction: column;
-            flex-direction: column;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
         .s-contacts .contacts-info .work-exp .career_item .work_title {
           font-family: Super_Plumber_Brothers;
           font-size: 40px;
@@ -268,8 +329,9 @@ section {
         .s-contacts .contacts-info .work-exp .career_item .castle {
           background-image: url(../img/career_castle.png);
           max-height: 30vh;
-          -ms-flex-positive: 1;
-              flex-grow: 1;
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1;
           background-size: contain;
           background-position: bottom center;
           background-repeat: no-repeat; }
@@ -279,17 +341,40 @@ section {
     -webkit-background-size: 5vh;
     background-repeat: repeat-x;
     background-size: 5vh;
-    transform: translateY(-10px); }
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .s-contacts .contacts-info .skill-item {
+    width: 50%; }
+    .s-contacts .contacts-info .skill-item .skill-name {
+      font-size: 35px; }
+  .s-contacts .contacts-info .pers-skills .pers-skill_item .skill-desc {
+    font-size: 50px; } }
 
 .mario {
   height: 17px;
   width: 17px;
   background: url("../img/smb_mario_sheet.gif") 0 5px;
-  transform: translateY(-50%) scale(2);
+  -webkit-transform: translateY(-50%) scale(2);
+          transform: translateY(-50%) scale(2);
+  -webkit-animation: animate-mario 0.5s 0s steps(4) infinite, move-mario ease-in 5s 0s infinite;
   animation: animate-mario 0.5s 0s steps(4) infinite, move-mario ease-in 5s 0s infinite;
   position: absolute;
   left: 100px;
   background-repeat: repeat-x; }
+
+@-webkit-keyframes animate-mario {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -72px 0; } }
+
+@-webkit-keyframes move-mario {
+  0% {
+    left: 30px; }
+  100% {
+    left: calc(100vw - 30px); } }
 
 @keyframes animate-mario {
   from {
@@ -304,34 +389,54 @@ section {
     left: calc(100vw - 30px); } }
 
 .bounce {
+  -webkit-animation-name: bounce;
   animation-name: bounce;
-  animation-duration: 3.3s;
-  animation-iteration-count: infinite; }
+  -webkit-animation-duration: 3.3s;
+          animation-duration: 3.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; }
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-20px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0); }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
   40% {
-    transform: translateY(-30px); }
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
   60% {
-    transform: translateY(-15px); } }
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px); } }
 
 .animDel-1 {
-  animation-delay: 1s; }
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
 
 .animDel-2 {
-  animation-delay: 2s; }
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
 
 .animDel-3 {
-  animation-delay: 3s; }
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
 
 .animDel-4 {
-  animation-delay: 4s; }
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s; }
 
 .animDel-5 {
-  animation-delay: 5s; }
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s; }
 
 .animDel-6 {
-  animation-delay: 6s; }
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s; }
 
 /*# sourceMappingURL=main.css.map */
