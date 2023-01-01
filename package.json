@@ -13,7 +13,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "webpack": "^4.28.2"
+    "webpack": "^5.75.0"
   },
   "scripts": {
     "test": "echo \\\"Errorr: no test specidied\\\" && exit 1"
